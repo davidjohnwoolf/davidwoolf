@@ -18,9 +18,9 @@ ReactDOM.render(
 				<nav>
 					<ul>
 						<li><Link to='/about'>About</Link></li>
-						<li><Link to='/about'>Skills</Link></li>
-						<li><Link to='/about'>Experience</Link></li>
-						<li><Link to='/about'>Projects</Link></li>
+						<li><Link to='/skills'>Skills</Link></li>
+						<li><Link to='/experience'>Experience</Link></li>
+						<li><Link to='/projects'>Projects</Link></li>
 					</ul>
 				</nav>
 			</header>
