@@ -7,38 +7,22 @@ body {
 
 body.about {
 	background: $blue;
-
-	nav li.nav-about a {
-		color: $black;
-		border-bottom: 5px $black solid;
-	}
 }
 
 body.skills {
 	background: $yellow;
-
-	nav li.nav-skills a {
-		color: $black;
-		border-bottom: 5px $black solid;
-	}
 }
 
 body.experience {
 	background: $orange;
-
-	nav li.nav-experience a {
-		color: $black;
-		border-bottom: 5px $black solid;
-	}
 }
 
 body.projects {
 	background: $green;
+}
 
-	nav li.nav-projects a {
-		color: $black;
-		border-bottom: 5px $black solid;
-	}
+body.contact {
+	background: $contact-primary;
 }
 
 a {
@@ -86,6 +70,11 @@ a {
 				a {
 					padding: $gutter-sm;
 					font-weight: bold;
+
+					&.selected {
+						color: $black;
+						border-bottom: 5px $black solid;
+					}
 				}
 			}
 		}
@@ -101,293 +90,385 @@ a {
 }
 
 .content {
-	margin: 0 $gutter $gutter $gutter;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
 
-	/*.content-title, */.content-next, .content-previous {
-		text-align: center;
-		width: 100%;
+	.content-next, .content-previous {
+		display: none;
 	}
 
-	.content-previous {
-		margin-bottom: 1rem;
-	}
-
-	/*.content-title {
-		margin: 0 0 $gutter 0;
-	}*/
-
-	.content-box {
-		background: $white;
-		margin-bottom: $gutter;
-		padding: $gutter;
-		box-sizing: border-box;
+	.sections {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 		width: 100%;
 
-		/* about */
+		> section {
+			background: $white;
+			margin-bottom: $gutter;
+			padding: $gutter;
+			box-sizing: border-box;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
 
-		&.about-picture {
-			img {
-				width: 100%;
-			}
-			@include media-sm-plus {
-				width: 30%;
-				border-right: $gutter-sm $blue solid;
-			}
-			@include media-md-plus {
-				width: 20%;
-			}
-		}
-
-		&.about-summary {
-			@include media-sm-plus {
-				width: 70%;
-				border-left: $gutter-sm $blue solid;
-			}
-			@include media-md-plus {
-				width: 80%;
+			h3 {
+				border-bottom: 2px $black solid;
+				margin: 0 0 $gutter 0;
 			}
 		}
+	}
 
-		&.about-training {
-			@include media-sm-plus {
-				width: 50%;
-				border-right: $gutter-sm $blue solid;
-			}
-		}
+	.about-sections {
 
-		&.about-contact {
-			@include media-sm-plus {
-				width: 50%;
-				border-left: $gutter-sm $blue solid;
-			}
-		}
+		> section {
 
-		/* skills */
+			a {
+				color: #d67743;
+				transition: $transition;
 
-		&.skills-lang {
-			@include media-sm-plus {
-				width: 33.3333%;
-				border-right: $gutter-sm $yellow solid;
-			}
-		}
-
-		&.skills-libs {
-			@include media-sm-plus {
-				width: 33.3333%;
-				border-left: $gutter-sm $yellow solid;
-				border-right: $gutter-sm $yellow solid;
-			}
-		}
-
-		&.skills-tech {
-			@include media-sm-plus {
-				width: 33.3333%;
-				border-left: $gutter-sm $yellow solid;
-			}
-		}
-
-		&.experience-job {
-			@include media-sm-plus {
-				width: 33.3333%;
-
-				&:nth-child(2) {
-					border-right: $gutter-sm $orange solid;
-				}
-
-				&:nth-child(3) {
-					border-right: $gutter-sm $orange solid;
-					border-left: $gutter-sm $orange solid;
-				}
-
-				&:nth-child(4) {
-					border-left: $gutter-sm $orange solid;
-				}
-
-				&:nth-child(5) {
-					width: 50%;
-					border-right: $gutter-sm $orange solid;
-				}
-
-				&:nth-child(6) {
-					width: 50%;
-					border-left: $gutter-sm $orange solid;
+				&:hover {
+					color: $blue;
 				}
 			}
-		}
 
-		&.project-project {
-			@include media-sm-plus {
-				width: 33.3333%;
-
-				&:nth-child(2) {
-					border-right: $gutter-sm $green solid;
+			&.about-picture {
+				img {
+					width: 100%;
 				}
-
-				&:nth-child(3) {
-					border-right: $gutter-sm $green solid;
-					border-left: $gutter-sm $green solid;
+				@include media-sm-plus {
+					width: 30%;
+					border-right: $gutter-sm $blue solid;
 				}
-
-				&:nth-child(4) {
-					border-left: $gutter-sm $green solid;
-				}
-
-				&:nth-child(5) {
-					border-right: $gutter-sm $green solid;
-				}
-
-				&:nth-child(6) {
-					border-right: $gutter-sm $green solid;
-					border-left: $gutter-sm $green solid;
-				}
-
-				&:nth-child(7) {
-					border-left: $gutter-sm $green solid;
+				@include media-md-plus {
+					width: 20%;
 				}
 			}
-		}
 
-		a {
-			color: $orange;
-			transition: $transition;
-
-			&:hover {
-				color: $blue;
-			}
-		}
-
-		h3 {
-			margin: 0 0 $gutter 0;
-		}
-
-		h4 {
-			margin: $gutter 0 $gutter-sm 0;
-		}
-
-		.content-box-sub {
-			h4 {
-				margin: $gutter-sm 0 0 0;
-				text-decoration: underline;
-			}
-
-			h6 {
-				margin: $gutter-xsm 0;
-				color: $grey;
-			}
-		}
-
-		.graph-bar {
-			.bar {
-				width: 100%;
-				border: .1rem $grey solid;
-				border-radius: $radius;
-				height: 2rem;
-				margin: 0 0 .5rem 0;
-				box-sizing: border-box;
-
-				span {
-					box-sizing: border-box;
-					display: inline-block;
-					height: 100%;
-					background: $grey-light;
-					color: $black;
-					padding: .3rem;
-					border-radius: .1rem 0 0 .1rem;
+			&.about-summary {
+				@include media-sm-plus {
+					width: 70%;
+					border-left: $gutter-sm $blue solid;
 				}
-
-				/* languages */
-				.bar-js {
+				@include media-md-plus {
 					width: 80%;
 				}
-				.bar-html {
-					width: 75%;
-				}
-				.bar-css {
-					width: 71%;
-				}
-				.bar-node {
-					width: 55%;
-				}
-				.bar-mongo {
-					width: 45%;
-				}
-				.bar-ruby {
-					width: 35%;
-				}
-				.bar-asp {
-					width: 30%;
-				}
-				.bar-postgres {
-					width: 25%;
-				}
-				.bar-python {
-					width: 20%;
-				}
-				/* libraries */
-				.bar-react {
-					width: 60%;
-				}
-				.bar-express {
-					width: 48%;
-				}
-				.bar-jquery {
-					width: 45%;
-				}
-				.bar-less {
-					width: 40%;
-				}
-				.bar-sass {
-					width: 40%;
-				}
-				.bar-bootstrap {
-					width: 35%;
-				}
-				.bar-mocha {
-					width: 30%;
-				}
-				.bar-mongoose {
-					width: 30%;
-				}
-				.bar-mithril {
-					width: 25%;
-				}
-				.bar-rails {
-					width: 20%;
-				}
-				.bar-sinatra {
-					width: 15%;
-				}
-				.bar-angular {
-					width: 13%;
+			}
+
+			&.about-training {
+
+				> section {
+					h4 {
+						margin: $gutter-sm 0 0 0;
+						text-decoration: underline;
+					}
+
+					h6 {
+						margin: $gutter-xsm 0;
+						color: $grey;
+					}
 				}
 
-				/* technologies */
-				.bar-http {
+				@include media-sm-plus {
 					width: 50%;
+					border-right: $gutter-sm $blue solid;
 				}
-				.bar-linux {
-					width: 38%;
+			}
+
+			&.about-contact {
+				@include media-sm-plus {
+					width: 50%;
+					border-left: $gutter-sm $blue solid;
 				}
-				.bar-git {
-					width: 35%;
+			}
+
+			h4 {
+				margin: $gutter 0 $gutter-sm 0;
+			}
+		}
+	}
+
+	.experience-sections {
+
+		> section {
+
+			a {
+				color: #2286de;
+
+				&:hover {
+					color: $orange;
 				}
-				.bar-webpack {
-					width: 25%;
+			}
+
+			h4 {
+				margin: 0;
+
+				.dates {
+					color: $grey;
+					float: right;
+					font-weight: normal;
+					font-size: .8rem;
 				}
-				.bar-inkscape {
-					width: 25%;
+			}
+
+			h5 {
+				font-size: 1rem;
+				margin: $gutter 0 $gutter-sm 0;
+			}
+
+			p {
+				margin: $gutter-sm 0;
+			}
+
+			@include media-sm-plus {
+				width: 33.3333%;
+
+				&:nth-child(3n) {
+					border-left: $gutter-sm $orange solid;
 				}
-				.bar-gimp {
-					width: 22%;
+
+				&:nth-child(3n-1) {
+					border-right: $gutter-sm $orange solid;
+					border-left: $gutter-sm $orange solid;
 				}
-				.bar-aws {
-					width: 20%;
+
+				&:nth-child(3n-2) {
+					border-right: $gutter-sm $orange solid;
 				}
-				.bar-gulp {
-					width: 15%;
+			}
+		}
+	}
+
+	.project-sections {
+
+		> section {
+
+			a {
+				color: #679698;
+
+				&:hover {
+					color: $green;
+				}
+			}
+
+			h4 {
+				margin: 0;
+
+				.dates {
+					color: $grey;
+					float: right;
+					font-weight: normal;
+					font-size: .8rem;
+				}
+			}
+
+			h5 {
+				font-size: 1rem;
+				margin: $gutter 0 $gutter-sm 0;
+			}
+
+			p {
+				margin: $gutter-sm 0;
+			}
+
+			@include media-sm-plus {
+				width: 33.3333%;
+
+				&:nth-child(3n) {
+					border-left: $gutter-sm $green solid;
+				}
+
+				&:nth-child(3n-1) {
+					border-right: $gutter-sm $green solid;
+					border-left: $gutter-sm $green solid;
+				}
+
+				&:nth-child(3n-2) {
+					border-right: $gutter-sm $green solid;
+				}
+			}
+		}
+	}
+
+	.contact-sections {
+
+		> section {
+
+			a {
+				color: $contact-secondary;
+
+				&:hover {
+					color: $contact-primary;
+				}
+			}
+
+			h4 {
+				margin: $gutter 0 $gutter-sm 0;
+			}
+
+			h5 {
+				font-size: 1rem;
+				margin: $gutter 0 $gutter-sm 0;
+			}
+
+			p {
+				margin: $gutter-sm 0;
+			}
+
+			@include media-sm-plus {
+				width: 50%;
+
+				&:nth-child(3) {
+					width: 100%;
+				}
+
+				&:nth-child(1) {
+					border-right: $gutter-sm $contact-primary solid;
+				}
+
+				&:nth-child(2) {
+					border-left: $gutter-sm $contact-primary solid;
+				}
+			}
+		}
+	}
+
+	.skills-sections {
+
+		> section {
+
+			&.skills-lang {
+				@include media-sm-plus {
+					width: 33.3333%;
+					border-right: $gutter-sm $yellow solid;
+				}
+			}
+
+			&.skills-libs {
+				@include media-sm-plus {
+					width: 33.3333%;
+					border-left: $gutter-sm $yellow solid;
+					border-right: $gutter-sm $yellow solid;
+				}
+			}
+
+			&.skills-tech {
+				@include media-sm-plus {
+					width: 33.3333%;
+					border-left: $gutter-sm $yellow solid;
+				}
+			}
+
+			.graph-bar {
+				.bar {
+					width: 100%;
+					border: .1rem #bbb solid;
+					border-radius: $radius;
+					height: 2rem;
+					margin: 0 0 .5rem 0;
+					box-sizing: border-box;
+					background: #f5f5f5;
+
+					span {
+						box-sizing: border-box;
+						display: inline-block;
+						height: 100%;
+						background: #d4dde1;
+						color: #333;
+						padding: .3rem;
+						border-radius: .1rem 0 0 .1rem;
+					}
+
+					/* languages */
+					.bar-js {
+						width: 80%;
+					}
+					.bar-html {
+						width: 75%;
+					}
+					.bar-css {
+						width: 71%;
+					}
+					.bar-node {
+						width: 55%;
+					}
+					.bar-mongo {
+						width: 45%;
+					}
+					.bar-ruby {
+						width: 35%;
+					}
+					.bar-asp {
+						width: 30%;
+					}
+					.bar-postgres {
+						width: 25%;
+					}
+					.bar-python {
+						width: 20%;
+					}
+
+					/* libraries */
+					.bar-react {
+						width: 60%;
+					}
+					.bar-express {
+						width: 48%;
+					}
+					.bar-jquery {
+						width: 45%;
+					}
+					.bar-less {
+						width: 40%;
+					}
+					.bar-sass {
+						width: 40%;
+					}
+					.bar-bootstrap {
+						width: 35%;
+					}
+					.bar-mocha {
+						width: 30%;
+					}
+					.bar-mongoose {
+						width: 30%;
+					}
+					.bar-mithril {
+						width: 25%;
+					}
+					.bar-rails {
+						width: 20%;
+					}
+					.bar-sinatra {
+						width: 15%;
+					}
+					.bar-angular {
+						width: 13%;
+					}
+
+					/* technologies */
+					.bar-http {
+						width: 50%;
+					}
+					.bar-linux {
+						width: 38%;
+					}
+					.bar-git {
+						width: 35%;
+					}
+					.bar-webpack {
+						width: 25%;
+					}
+					.bar-inkscape {
+						width: 25%;
+					}
+					.bar-gimp {
+						width: 22%;
+					}
+					.bar-aws {
+						width: 20%;
+					}
+					.bar-gulp {
+						width: 15%;
+					}
 				}
 			}
 		}
@@ -396,4 +477,71 @@ a {
 	@include media-sm-plus {
 		margin: 0 $gutter-lg $gutter $gutter-lg;
 	}
+}
+
+.hug-bottom {
+	margin-top: auto;
+}
+
+#app {
+	position: relative;
+
+	/*.slide {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		-webkit-animation: slide 0.5s forwards;
+	    animation: slide 0.5s forwards;
+
+		&.slide-in {
+			right: -100%;
+			transform: translateX(-100%);
+    		-webkit-transform: translateX(-100%);
+
+			&.visible {
+			    transition: opacity 5s ease-in;
+			    transform: translateX(-100%)
+			}
+		}
+	}*/
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+}
+
+.slide-in {
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+}
+
+.slide-out {
+    animation: slide-out 0.5s forwards;
+    -webkit-animation: slide-out 0.5s forwards;
+}
+    
+@keyframes slide-in {
+    100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes slide-in {
+    100% { -webkit-transform: translateX(0%); }
+}
+
+@keyframes slide-out {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes slide-out {
+    0% { -webkit-transform: translateX(0%); }
+    100% { -webkit-transform: translateX(-100%); }
 }
