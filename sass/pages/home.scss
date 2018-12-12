@@ -1,0 +1,71 @@
+#home {
+	.home-sections {
+
+		> section {
+
+			a {
+				color: #d67743;
+				transition: $transition;
+
+				&:hover {
+					color: $blue;
+				}
+			}
+
+			&.home-picture {
+				img {
+					width: 100%;
+				}
+				@include media-sm-plus {
+					width: 30%;
+					border-right: $gutter-sm $blue solid;
+				}
+				@include media-md-plus {
+					width: 20%;
+				}
+			}
+
+			&.home-summary {
+				@include media-sm-plus {
+					width: 70%;
+					border-left: $gutter-sm $blue solid;
+				}
+
+				@include media-md-plus {
+					width: 80%;
+				}
+			}
+
+			&.home-training {
+
+				> section {
+					h4 {
+						margin: $gutter-sm 0 0 0;
+						text-decoration: underline;
+					}
+
+					h6 {
+						margin: $gutter-xsm 0;
+						color: $grey;
+					}
+				}
+
+				@include media-sm-plus {
+					width: 50%;
+					border-right: $gutter-sm $blue solid;
+				}
+			}
+
+			&.home-contact {
+				@include media-sm-plus {
+					width: 50%;
+					border-left: $gutter-sm $blue solid;
+				}
+			}
+
+			h4 {
+				margin: $gutter 0 $gutter-sm 0;
+			}
+		}
+	}
+}

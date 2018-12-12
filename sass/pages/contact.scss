@@ -1,0 +1,44 @@
+#contact {
+	.contact-sections {
+
+		> section {
+
+			a {
+				color: $contact-secondary;
+
+				&:hover {
+					color: $contact-primary;
+				}
+			}
+
+			h4 {
+				margin: $gutter 0 $gutter-sm 0;
+			}
+
+			h5 {
+				font-size: 1rem;
+				margin: $gutter 0 $gutter-sm 0;
+			}
+
+			p {
+				margin: $gutter-sm 0;
+			}
+
+			@include media-sm-plus {
+				width: 50%;
+
+				&:nth-child(3) {
+					width: 100%;
+				}
+
+				&:nth-child(1) {
+					border-right: $gutter-sm $contact-primary solid;
+				}
+
+				&:nth-child(2) {
+					border-left: $gutter-sm $contact-primary solid;
+				}
+			}
+		}
+	}
+}

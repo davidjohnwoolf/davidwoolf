@@ -1,0 +1,52 @@
+#projects {
+	.project-sections {
+
+		> section {
+
+			a {
+				color: #679698;
+
+				&:hover {
+					color: $green;
+				}
+			}
+
+			h4 {
+				margin: 0;
+
+				.dates {
+					color: $grey;
+					float: right;
+					font-weight: normal;
+					font-size: .8rem;
+				}
+			}
+
+			h5 {
+				font-size: 1rem;
+				margin: $gutter 0 $gutter-sm 0;
+			}
+
+			p {
+				margin: $gutter-sm 0;
+			}
+
+			@include media-sm-plus {
+				width: 33.3333%;
+
+				&:nth-child(3n) {
+					border-left: $gutter-sm $green solid;
+				}
+
+				&:nth-child(3n-1) {
+					border-right: $gutter-sm $green solid;
+					border-left: $gutter-sm $green solid;
+				}
+
+				&:nth-child(3n-2) {
+					border-right: $gutter-sm $green solid;
+				}
+			}
+		}
+	}
+}
