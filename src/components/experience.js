@@ -1,11 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router';
 
 class Experience extends React.Component {
 	constructor(props) {
 		super(props);
 
 		document.querySelector('body').classList = 'experience';
+	}
+
+	componentDidUpdate() {
+		console.log(this.props.startData);
+		if (this.props.startData.transition) {
+			const path = this.props.startData.dest;
+
+			this.props.resetHandler();
+			this.props.history.push(path);
+		}
 	}
 
 	render() {
@@ -96,4 +107,4 @@ class Experience extends React.Component {
 	}
 }
 
-export default Experience;
+export default withRouter(Experience);
