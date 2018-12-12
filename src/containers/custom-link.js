@@ -5,7 +5,7 @@ class CustomLink extends React.Component {
 
 	render() {
 		return (
-			<a href="#" onClick={ () => this.props.startHandler(this.props.location.pathname) }>
+			<a href="javascript:void(0);" onClick={ () => this.props.startHandler(this.props.location.pathname) }>
 				{ this.props.children }
 			</a>
 		);

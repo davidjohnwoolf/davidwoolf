@@ -15,15 +15,17 @@ class Home extends React.Component {
 		if (this.props.startData.transition) {
 			const dest = this.props.startData.dest;
 			setTimeout(() => {
+				this.props.resetHandler();
+
+				console.log('dest in update', dest)
 	            this.props.history.push(dest);
-	            this.props.resetHandler();
 	        }, 500)
 		}
 	}
 
 	render() {
 		return (
-			<div className={ `${ this.props.startData.transition ? 'slide-end slide-out' : '' }` } id="home">
+			<div className={ `${ this.props.startData.transition ? 'f-exit' : '' }` } id="home">
 				<div className="content home">
 					<div className="home-sections sections">
 						<section className="home-picture">
@@ -56,15 +58,15 @@ class Home extends React.Component {
 						<section className="home-contact">
 							<h3>Contact</h3>
 							<h4>Email</h4>
-							<a href="mailto:davidjohnwoolf@gmail.com">davidjohnwoolf@gmail.com</a>
+							<p><a href="mailto:davidjohnwoolf@gmail.com">davidjohnwoolf@gmail.com</a></p>
 							<h4>Phone</h4>
-							<a href="tel:8016339105">801.633.9105</a>
+							<p><a href="tel:8016339105">801.633.9105</a></p>
 							<h4>Location</h4>
-							<a href="https://goo.gl/maps/LW89sKg8YSK2" target="_blank">Salt Lake City, UT</a>
+							<p><a href="https://goo.gl/maps/LW89sKg8YSK2" target="_blank">Salt Lake City, UT</a></p>
 							<h4>Github</h4>
-							<a href="https://github.com/davidjohnwoolf" target="_blank">github.com/davidjohnwoolf</a>
+							<p><a href="https://github.com/davidjohnwoolf" target="_blank">github.com/davidjohnwoolf</a></p>
 							<h4>Linked In</h4>
-							<a href="https://linkedin.com/in/davidjohnwoolf" target="_blank">linkedin.com/in/davidjohnwoolf</a>
+							<p><a href="https://linkedin.com/in/davidjohnwoolf" target="_blank">linkedin.com/in/davidjohnwoolf</a></p>
 						</section>
 					</div>
 					<nav className="content-next">

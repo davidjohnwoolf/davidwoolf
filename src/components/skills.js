@@ -22,16 +22,19 @@ class Skills extends React.Component {
 
 	componentDidUpdate() {
 		if (this.props.startData.transition) {
-			const path = this.props.startData.dest;
+			const dest = this.props.startData.dest;
+			setTimeout(() => {
+				this.props.resetHandler();
 
-			this.props.resetHandler();
-			this.props.history.push(path);
+				console.log('dest in update', dest)
+	            this.props.history.push(dest);
+	        }, 500)
 		}
 	}
 
 	render() {
 		return (
-			<div className={ `slide-start ${ this.state.didMount ? 'slide-in' : '' }` } id="skills">
+			<div className={ `f-enter-start ${ this.state.didMount ? 'f-enter' : '' }` } id="skills">
 				<div className="content skills">
 					<nav className="content-previous">
 						<Link to="/about">&#9650;</Link>

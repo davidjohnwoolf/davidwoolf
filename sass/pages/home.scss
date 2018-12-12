@@ -40,12 +40,10 @@
 
 				> section {
 					h4 {
-						margin: $gutter-sm 0 0 0;
 						text-decoration: underline;
 					}
 
 					h6 {
-						margin: $gutter-xsm 0;
 						color: $grey;
 					}
 				}
@@ -61,10 +59,6 @@
 					width: 50%;
 					border-left: $gutter-sm $blue solid;
 				}
-			}
-
-			h4 {
-				margin: $gutter 0 $gutter-sm 0;
 			}
 		}
 	}

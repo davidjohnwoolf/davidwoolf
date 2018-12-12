@@ -14,12 +14,14 @@ class Projects extends React.Component {
 	}
 
 	componentDidUpdate() {
-		console.log(this.props.startData);
 		if (this.props.startData.transition) {
-			const path = this.props.startData.dest;
+			const dest = this.props.startData.dest;
+			setTimeout(() => {
+				this.props.resetHandler();
 
-			this.props.resetHandler();
-			this.props.history.push(path);
+				console.log('dest in update', dest);
+	            this.props.history.push(dest);
+	        }, 500)
 		}
 	}
 
