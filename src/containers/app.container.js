@@ -2,6 +2,7 @@ import React from 'react';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 import CustomLink from './custom-link';
+import SlideContainer from './slide.container';
 
 import Home from '../components/home';
 import Skills from '../components/skills';
@@ -14,7 +15,8 @@ class AppContainer extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.state = { transition: false, path: undefined, dest: undefined };
+		//create a sub section called transition so it is not just the whole state
+		this.state = { transition: false, path: '', dest: '', isForward: true };
 
 		this.startHandler = this.startHandler.bind(this);
 		this.resetHandler = this.resetHandler.bind(this);
@@ -30,20 +32,19 @@ class AppContainer extends React.Component {
 			this.setState({
 				dest: dest,
 				path: path,
-				transition: true
+				transition: true,
+				isFoward: paths.indexOf(dest) > paths.indexOf(path)
 			});
 		}
 	}
 
 	resetHandler() {
-		console.log('before reset', this.state);
-		this.setState({ transition: false, path: undefined, dest: undefined });
-		console.log('after reset', this.state);
+		this.setState({ transition: false });
 	}
 
 	render() {
 		return (
-			<Router history={ this.history }>
+			<Router history={ this.history } test="test">
 				<div>
 					<header className="site-header">
 						<h1>David Woolf</h1>
@@ -69,11 +70,41 @@ class AppContainer extends React.Component {
 						</nav>
 					</header>
 					<Switch>
-						<Route exact path="/" render={ () => <Home resetHandler={ this.resetHandler } startData={ this.state } />  } />
-						<Route path="/skills" render={ () => <Skills resetHandler={ this.resetHandler } startData={ this.state } /> } />
-						<Route path="/experience" render={ () => <Experience resetHandler={ this.resetHandler } startData={ this.state } /> } />
-						<Route path="/projects" render={ () => <Projects resetHandler={ this.resetHandler } startData={ this.state } /> } />
-						<Route path="/contact" render={ () => <Contact resetHandler={ this.resetHandler } startData={ this.state } /> } />
+						<Route exact path="/" render={
+							() => {
+								return <SlideContainer resetHandler={ this.resetHandler } config={ this.state }>
+									<Home />
+								</SlideContainer>
+							}
+						} />
+						<Route exact path="/skills" render={
+							() => {
+								return <SlideContainer resetHandler={ this.resetHandler } config={ this.state }>
+									<Skills />
+								</SlideContainer>
+							}
+						} />
+						<Route exact path="/experience" render={
+							() => {
+								return <SlideContainer resetHandler={ this.resetHandler } config={ this.state }>
+									<Experience />
+								</SlideContainer>
+							}
+						} />
+						<Route exact path="/projects" render={
+							() => {
+								return <SlideContainer resetHandler={ this.resetHandler } config={ this.state }>
+									<Projects />
+								</SlideContainer>
+							}
+						} />
+						<Route exact path="/contact" render={
+							() => {
+								return <SlideContainer resetHandler={ this.resetHandler } config={ this.state }>
+									<Contact />
+								</SlideContainer>
+							}
+						} />
 					</Switch>
 				</div>
 			</Router>
@@ -96,5 +127,10 @@ export default AppContainer;
 <li className="nav-experience"><NavLink activeClassName="selected" to="/experience">Experience</NavLink></li>
 <li className="nav-projects"><NavLink activeClassName="selected" to="/projects">Projects</NavLink></li>
 <li className="nav-contact"><NavLink activeClassName="selected" to="/contact">Contact</NavLink></li>
+
+<Route path="/skills" render={ () => <Skills resetHandler={ this.resetHandler } startData={ this.state } /> } />
+						<Route path="/experience" render={ () => <Experience resetHandler={ this.resetHandler } startData={ this.state } /> } />
+						<Route path="/projects" render={ () => <Projects resetHandler={ this.resetHandler } startData={ this.state } /> } />
+						<Route path="/contact" render={ () => <Contact resetHandler={ this.resetHandler } startData={ this.state } /> } />
 
 */
