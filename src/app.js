@@ -4,7 +4,8 @@ require('../sass/base.scss');
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import createRouter from './lib/create-router'
+import createRouter from './router/create-router'
+import { slideMiddleware } from './router/middleware'
 
 import AppContainer from './containers/app.container';
 
@@ -15,14 +16,14 @@ import Experience from './components/experience';
 import Contact from './components/contact';
 
 const routes = [
-	{ path: '/', action: () => <Home /> },
-	{ path: '/skills', action: () => <Skills /> },
-	{ path: '/experience', action: () => <Experience /> },
-	{ path: '/projects', action: () => <Projects /> },
-	{ path: '/contact', action: () => <Contact /> }
+	{ path: '/', action: (props) => <Home props={ props } /> },
+	{ path: '/skills', action: (props) => <Skills props={ props } /> },
+	{ path: '/experience', action: (props) => <Experience props={ props } /> },
+	{ path: '/projects', action: (props) => <Projects props={ props } /> },
+	{ path: '/contact', action: (props) => <Contact props={ props } /> }
 ]
 
-const router = createRouter({ routes, container: AppContainer })
+const router = createRouter({ routes, container: AppContainer, middleware: [slideMiddleware] })
 
 const render = e => ReactDOM.render(router.resolveRoute(e), document.querySelector('#app'))
 

@@ -17,10 +17,10 @@ const AppContainer = (child, props) => {
 				</nav>
 			</header>
 			<div>
-				{ child }
+				{ React.cloneElement(child, { props }) }
 			</div>
 		</div>
 	)
 }
 
-export default AppContainer;
+export default AppContainer

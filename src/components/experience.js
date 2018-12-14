@@ -5,6 +5,8 @@ class Experience extends React.Component {
 	constructor(props) {
 		super(props);
 
+		console.log(props)
+
 		document.querySelector('body').classList = 'experience';
 	}
 
