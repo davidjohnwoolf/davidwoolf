@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { withRouter } from 'react-router';
 
 class Contact extends React.Component {
 
@@ -13,9 +11,6 @@ class Contact extends React.Component {
 	render() {
 		return (
 			<div className="content" id="contact">
-				<nav className="content-previous">
-					<Link to="/projects">&#9650;</Link>
-				</nav>
 				<div className="contact-sections sections">
 					<section>
 						<h3>Form</h3>
@@ -42,4 +37,4 @@ class Contact extends React.Component {
 	}
 }
 
-export default withRouter(Contact);
+export default Contact;

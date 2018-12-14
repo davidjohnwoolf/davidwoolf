@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { withRouter } from 'react-router';
 
 class Experience extends React.Component {
 
@@ -13,9 +11,6 @@ class Experience extends React.Component {
 	render() {
 		return (
 			<div className="content" id="experience">
-				<nav className="content-previous">
-					<Link to="/skills">&lsaquo;</Link>
-				</nav>
 				<div className="experience-sections sections">
 					<section>
 						<h3>Full Stack Developer</h3>
@@ -90,12 +85,9 @@ class Experience extends React.Component {
 						</div>
 					</section>
 				</div>
-				<nav className="content-next">
-					<Link to="/projects">&rsaquo;</Link>
-				</nav>
 			</div>
 		);
 	}
 }
 
-export default withRouter(Experience);
+export default Experience;

@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { withRouter } from 'react-router';
 
 class Skills extends React.Component {
 
@@ -13,9 +11,6 @@ class Skills extends React.Component {
 	render() {
 		return (
 			<div className="content" id="skills">
-				<nav className="content-previous">
-					<Link to="/about">&#9650;</Link>
-				</nav>
 				<div className="skills-sections sections">
 					<section className="skills-lang">
 						<h3>Languages</h3>
@@ -62,12 +57,9 @@ class Skills extends React.Component {
 						</section>
 					</section>
 				</div>
-				<nav className="content-next">
-					<Link to="/experience">&#9660;</Link>
-				</nav>
 			</div>
 		);
 	}
 }
 
-export default withRouter(Skills);
+export default Skills;

@@ -1,53 +1,48 @@
 //import css for webpack
 require('../sass/base.scss');
 
+//modules
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-//import AppContainer from './containers/app.container';
+//lib
+import createRouter from './lib/create-router'
 
-render(history.getCurrentLocation());
+//containers
+import AppContainer from './containers/app.container';
 
-window.onhashchange = router.routeChangeHandler({ type, newURL, oldURL })
+//components
+import Home from './components/home';
+import Projects from './components/projects';
+import Skills from './components/skills';
+import Experience from './components/experience';
+import Contact from './components/contact';
 
-ReactDOM.render(
-	<AppContainer />,
-	document.querySelector('#app')
-)
+const log1 = action => {
+	console.log('middleware 1 running...')
+	return action
+}
 
-/*
-<Router>
-		<div>
-			<header className="site-header">
-				<h1>David Woolf</h1>
-				<span className="menu-bar">&#9776;</span>
-				<nav>
-					<ul>
-						<li className="nav-home">
-							<CustomLink url="/">Home</CustomLink>
-						</li>
-						<li className="nav-skills">
-							<CustomLink url="/skills">Skills</CustomLink>
-						</li>
-						<li className="nav-experience">
-							<CustomLink url="/experience">Experience</CustomLink>
-						</li>
-						<li className="nav-projects">
-							<CustomLink url="/projects">Projects</CustomLink>
-						</li>
-						<li className="nav-contact">
-							<CustomLink url="/contact">Contact</CustomLink>
-						</li>
-					</ul>
-				</nav>
-			</header>
-			<Switch>
-				<Route path="/" component={ Home } />
-				<Route path="/skills" component={ Skills } />
-				<Route path="/experience" component={ Experience } />
-				<Route path="/projects" component={ Projects } />
-				<Route path="/contact" component={ Contact } />
-			</Switch>
-		</div>
-	</Router>
-	*/
+const log2 = action => {
+	console.log('middleware 2 running...')
+	return action
+}
+
+const routes = [
+	{ path: '/', action: () => <Home /> },
+	{ path: '/skills', action: () => <Skills /> },
+	{ path: '/experience', action: () => <Experience /> },
+	{ path: '/projects', action: () => <Projects /> },
+	{ path: '/contact', action: () => <Contact /> }
+]
+
+//initialize router
+const router = createRouter({ routes, container: AppContainer, middlewares: [log1, log2] })
+
+const render = e => ReactDOM.render(router.resolveRoute(e), document.querySelector('#app'));
+
+//initial render
+render(window.location.hash)
+
+//render on hash change
+window.onhashchange = render
