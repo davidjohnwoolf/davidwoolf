@@ -4,12 +4,16 @@ require('../sass/base.scss');
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import AppContainer from './containers/app.container';
+//import AppContainer from './containers/app.container';
+
+render(history.getCurrentLocation());
+
+window.onhashchange = router.routeChangeHandler({ type, newURL, oldURL })
 
 ReactDOM.render(
 	<AppContainer />,
 	document.querySelector('#app')
-);
+)
 
 /*
 <Router>
