@@ -1,5 +1,10 @@
 import React from 'react';
-import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+
+const AppContainer = (props) => <div>Working</div>;
+
+export default AppContainer;
+
+/*import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 import CustomLink from './custom-link';
 import SlideContainer from './slide.container';
@@ -112,9 +117,8 @@ class AppContainer extends React.Component {
 	}
 }
 
+------
 export default AppContainer;
-
-/*
 
 <li><span onClick={ () => this.transitionHandler('/') }>Home</span></li>
 <li><span onClick={ () => this.transitionHandler('/skills') }>Skills</span></li>
