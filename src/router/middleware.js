@@ -1,8 +1,22 @@
-export const slideMiddleware = (action) => {
+//think of a better name
+export const setSlideDirectionOnProps = (data) => {
 
-	const findPathIndex = (path) => action.routes.findIndex(c => c.path === path)
+	if (!data.oldRoute) return data
 
-	const slideForward = findPathIndex(action.newRoute.path) > findPathIndex(action.oldRoute.path)
+	const findPathIndex = (path) => data.routes.findIndex(c => c.path === path)
 
-	return { ...action, props: { slideForward } }
+	//maybe dont mutate this
+	data.props.slideForward = findPathIndex(data.newRoute.path) > findPathIndex(data.oldRoute.path)
+
+	return data
+}
+
+export const addPathToProps = (data) => {
+
+	const findPathIndex = (path) => data.routes.findIndex(c => c.path === path)
+
+	//maybe dont mutate this
+	data.props.path = data.newRoute.path
+
+	return data
 }
