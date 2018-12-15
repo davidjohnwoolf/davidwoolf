@@ -6,6 +6,12 @@
 @import 'pages/projects';
 @import 'pages/contact';
 
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
 body {
 	font-family: $font-family;
 }
@@ -33,20 +39,12 @@ p {
 }
 
 .app-container {
-	height: 100vh;
+	height: 100%;
 	width: 100%;
-
-	&.home {
-		background: $blue;
-
-		.link-home {
-			color: $black;
-			border-bottom: .25rem $black solid;
-		}
-	}
+	transition: $transition;
 
 	&.skills {
-		background: $yellow;
+		background: $skills-primary;
 
 		.link-skills {
 			color: $black;
@@ -55,7 +53,7 @@ p {
 	}
 
 	&.experience {
-		background: $orange;
+		background: $experience-primary;
 
 		.link-experience {
 			color: $black;
@@ -64,7 +62,7 @@ p {
 	}
 
 	&.projects {
-		background: $green;
+		background: $projects-primary;
 
 		.link-projects {
 			color: $black;
@@ -147,31 +145,15 @@ p {
 
 	.content {
 
-		margin: $gutter-sm $gutter;
+		padding: $gutter;
 
-		.content-next, .content-previous {
-			display: none;
-		}
-
-		.sections {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			width: 100%;
-
-			> section {
-				background: $white;
-				margin-bottom: $gutter;
-				padding: $gutter;
-				box-sizing: border-box;
-				width: 100%;
-				display: flex;
-				flex-direction: column;
-			}
+		> div > section {
+			background: $white;
+			padding: $gutter;
 		}
 
 		@include media-sm-plus {
-			margin: $gutter $gutter-lg;
+			padding: $gutter;
 		}
 	}
 }
@@ -181,18 +163,14 @@ p {
 
 .f-enter {
 	transform: translateX(100%);
-    animation: f-enter 0.5s forwards;
+    animation: slide-in 0.5s forwards;
 }
 
 .b-enter {
 	transform: translateX(-100%);
-    animation: b-enter 0.5s forwards;
+    animation: slide-in 0.5s forwards;
 }
     
-@keyframes f-enter {
-    100% { transform: translateX(0%); }
-}
-    
-@keyframes b-enter {
+@keyframes slide-in {
     100% { transform: translateX(0%); }
 }

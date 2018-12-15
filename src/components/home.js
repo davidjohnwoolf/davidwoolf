@@ -6,7 +6,7 @@ const Home = ({ slideForward }) => {
 		<div className={ `content ${ slideForward ? 'f-enter' : 'b-enter' }` } id="home">
 			<div className="home-sections sections">
 				<section className="home-picture">
-					<img src="http://placehold.it/500x500" alt="David Woolf" />
+					
 				</section>
 				<section className="home-summary">
 					<h3>Summary</h3>

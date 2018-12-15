@@ -1,13 +1,22 @@
 #experience {
 	.experience-sections {
 
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 1rem;
+		grid-template-rows: auto;
+
+		@include media-sm-plus {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
 		> section {
 
 			a {
-				color: #2286de;
+				color: $experience-secondary;
 
 				&:hover {
-					color: $orange;
+					color: $experience-primary;
 				}
 			}
 
@@ -29,23 +38,6 @@
 
 			p {
 				margin: $gutter-sm 0;
-			}
-
-			@include media-sm-plus {
-				width: 33.3333%;
-
-				&:nth-child(3n) {
-					border-left: $gutter-sm $orange solid;
-				}
-
-				&:nth-child(3n-1) {
-					border-right: $gutter-sm $orange solid;
-					border-left: $gutter-sm $orange solid;
-				}
-
-				&:nth-child(3n-2) {
-					border-right: $gutter-sm $orange solid;
-				}
 			}
 		}
 	}

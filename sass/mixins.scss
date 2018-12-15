@@ -1,5 +1,11 @@
 //Media Queries
 
+@mixin media-sm-minus {
+  @media (max-width: #{$break-sm - 1px}) {
+    @content;
+  }
+}
+
 @mixin media-xs {
   @media (min-width: #{$break-xs}) and (max-width: #{$break-sm - 1px}) {
     @content;

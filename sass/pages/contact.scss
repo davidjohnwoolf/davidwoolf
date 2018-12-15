@@ -1,7 +1,39 @@
 #contact {
 	.contact-sections {
 
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 1rem;
+		grid-template-rows: auto;
+		grid-template-areas:
+				"form"
+				"info"
+				"graphic";
+
+		@include media-sm-plus {
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-areas:
+				"form form info info"
+				"graphic graphic graphic graphic";
+		}
+
 		> section {
+
+			&.contact-form {
+				grid-area: form;
+			}
+
+			&.contact-info {
+				grid-area: info;
+			}
+
+			&.contact-graphic {
+				grid-area: graphic;
+
+				img {
+					max-width: 100%;
+				}
+			}
 
 			a {
 				color: $contact-secondary;
@@ -22,22 +54,6 @@
 
 			p {
 				margin: $gutter-sm 0;
-			}
-
-			@include media-sm-plus {
-				width: 50%;
-
-				&:nth-child(3) {
-					width: 100%;
-				}
-
-				&:nth-child(1) {
-					border-right: $gutter-sm $contact-primary solid;
-				}
-
-				&:nth-child(2) {
-					border-left: $gutter-sm $contact-primary solid;
-				}
 			}
 		}
 	}

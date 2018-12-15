@@ -1,13 +1,22 @@
 #projects {
 	.project-sections {
 
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 1rem;
+		grid-template-rows: auto;
+
+		@include media-sm-plus {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
 		> section {
 
 			a {
-				color: #679698;
+				color: $projects-secondary;
 
 				&:hover {
-					color: $green;
+					color: $projects-primary;
 				}
 			}
 
@@ -29,23 +38,6 @@
 
 			p {
 				margin: $gutter-sm 0;
-			}
-
-			@include media-sm-plus {
-				width: 33.3333%;
-
-				&:nth-child(3n) {
-					border-left: $gutter-sm $green solid;
-				}
-
-				&:nth-child(3n-1) {
-					border-right: $gutter-sm $green solid;
-					border-left: $gutter-sm $green solid;
-				}
-
-				&:nth-child(3n-2) {
-					border-right: $gutter-sm $green solid;
-				}
 			}
 		}
 	}

@@ -1,63 +1,83 @@
-#home {
-	.home-sections {
+.home {
+	background: $home-primary;
 
-		> section {
+	.header nav a.link-home {
+		color: $black;
+		border-bottom: .25rem $black solid;
+	}
 
-			a {
-				color: #d67743;
-				transition: $transition;
+	#home {
+		.home-sections {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-gap: 1rem;
+			grid-template-rows: auto;
+			grid-template-areas:
+				"picture"
+				"summary"
+				"training"
+				"contact";
 
-				&:hover {
-					color: $blue;
-				}
+			@include media-sm-plus {
+				grid-template-columns: repeat(4, 1fr);
+				grid-template-areas:
+					"picture summary summary summary"
+					"training training contact contact";
 			}
 
-			&.home-picture {
-				img {
-					width: 100%;
-				}
-				@include media-sm-plus {
-					width: 30%;
-					border-right: $gutter-sm $blue solid;
-				}
-				@include media-md-plus {
-					width: 20%;
-				}
+			@include media-md-plus {
+				grid-template-columns: repeat(6, 1fr);
+				grid-template-areas:
+					"picture summary summary summary summary summary"
+					"training training training contact contact contact";
 			}
 
-			&.home-summary {
-				@include media-sm-plus {
-					width: 70%;
-					border-left: $gutter-sm $blue solid;
-				}
 
-				@include media-md-plus {
-					width: 80%;
-				}
-			}
+			> section {
 
-			&.home-training {
+				a {
+					color: $home-secondary;
+					transition: $transition;
 
-				> section {
-					h4 {
-						text-decoration: underline;
-					}
-
-					h6 {
-						color: $grey;
+					&:hover {
+						color: $home-primary;
 					}
 				}
 
-				@include media-sm-plus {
-					width: 50%;
-					border-right: $gutter-sm $blue solid;
-				}
-			}
+				&.home-picture {
+					grid-area: picture;
+					padding: 0;
+					background: url(http://placehold.it/500x500);
+					background-position: center;
+					background-size: cover;
 
-			&.home-contact {
-				@include media-sm-plus {
-					width: 50%;
-					border-left: $gutter-sm $blue solid;
+					@include media-sm-minus {
+						min-height: 15rem;
+						min-width: 15rem;
+						margin: 0 auto;
+					}
+				}
+
+				&.home-summary {
+					grid-area: summary;
+				}
+
+				&.home-training {
+					grid-area: training;
+
+					> section {
+						h4 {
+							text-decoration: underline;
+						}
+
+						h6 {
+							color: $grey;
+						}
+					}
+				}
+
+				&.home-contact {
+					grid-area: contact;
 				}
 			}
 		}

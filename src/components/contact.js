@@ -5,10 +5,10 @@ const Contact = ({ slideForward }) => {
 	return (
 		<div className={ `content ${ slideForward ? 'f-enter' : 'b-enter' }` } id="contact">
 			<div className="contact-sections sections">
-				<section>
+				<section className="contact-form">
 					<h3>Form</h3>
 				</section>
-				<section>
+				<section className="contact-info">
 					<h3>Contact</h3>
 					<h4>Email</h4>
 					<a href="mailto:davidjohnwoolf@gmail.com">davidjohnwoolf@gmail.com</a>
@@ -21,7 +21,7 @@ const Contact = ({ slideForward }) => {
 					<h4>Linked In</h4>
 					<a href="https://linkedin.com/in/davidjohnwoolf" target="_blank">linkedin.com/in/davidjohnwoolf</a>
 				</section>
-				<section>
+				<section className="contact-graphic">
 					<img src="http://placehold.it/800x200" alt="goodbye" />
 				</section>
 			</div>

@@ -27,9 +27,11 @@ const router = createRouter({
 	routes, container: AppContainer, middleware: [addPathToProps, addSlideDirectionToProps]
 })
 
+//sends router components to react
 const renderRoute = e => ReactDOM.render(router(e), document.querySelector('#app'))
 
 //for initial load
 renderRoute()
 
+//passes the hashchage event to renderRoute
 window.onhashchange = renderRoute
