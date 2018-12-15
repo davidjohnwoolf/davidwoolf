@@ -4,6 +4,7 @@ const AppContainer = (child, { path, slideForward }) => {
 
 	return (
 		<div className={ `app-container ${ path.slice(1) || 'home' }` }>
+			<div className="fixed-bg"></div>
 			<header className="header">
 				<h1>David Woolf</h1>
 				<span className="menu-bar">&#9776;</span>

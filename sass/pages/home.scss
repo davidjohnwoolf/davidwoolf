@@ -1,5 +1,8 @@
 .home {
-	background: $home-primary;
+
+	.fixed-bg {
+		background: $home-primary;
+	}
 
 	.header nav a.link-home {
 		color: $black;

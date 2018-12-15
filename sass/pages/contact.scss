@@ -1,59 +1,71 @@
-#contact {
-	.contact-sections {
+.contact {
 
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-gap: 1rem;
-		grid-template-rows: auto;
-		grid-template-areas:
-				"form"
-				"info"
-				"graphic";
+	.fixed-bg {
+		background: $contact-primary;
+	}
 
-		@include media-sm-plus {
-			grid-template-columns: repeat(4, 1fr);
+	.header nav a.link-contact {
+		color: $black;
+		border-bottom: .25rem $black solid;
+	}
+
+	#contact {
+		.contact-sections {
+
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-gap: 1rem;
+			grid-template-rows: auto;
 			grid-template-areas:
-				"form form info info"
-				"graphic graphic graphic graphic";
-		}
+					"form"
+					"info"
+					"graphic";
 
-		> section {
-
-			&.contact-form {
-				grid-area: form;
+			@include media-sm-plus {
+				grid-template-columns: repeat(4, 1fr);
+				grid-template-areas:
+					"form form info info"
+					"graphic graphic graphic graphic";
 			}
 
-			&.contact-info {
-				grid-area: info;
-			}
+			> section {
 
-			&.contact-graphic {
-				grid-area: graphic;
-
-				img {
-					max-width: 100%;
+				&.contact-form {
+					grid-area: form;
 				}
-			}
 
-			a {
-				color: $contact-secondary;
-
-				&:hover {
-					color: $contact-primary;
+				&.contact-info {
+					grid-area: info;
 				}
-			}
 
-			h4 {
-				margin: $gutter 0 $gutter-sm 0;
-			}
+				&.contact-graphic {
+					grid-area: graphic;
 
-			h5 {
-				font-size: 1rem;
-				margin: $gutter 0 $gutter-sm 0;
-			}
+					img {
+						max-width: 100%;
+					}
+				}
 
-			p {
-				margin: $gutter-sm 0;
+				a {
+					color: $contact-secondary;
+
+					&:hover {
+						color: $contact-primary;
+					}
+				}
+
+				h4 {
+					margin: $gutter 0 $gutter-sm 0;
+				}
+
+				h5 {
+					font-size: 1rem;
+					margin: $gutter 0 $gutter-sm 0;
+				}
+
+				p {
+					margin: $gutter-sm 0;
+				}
 			}
 		}
 	}

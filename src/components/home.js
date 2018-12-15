@@ -46,6 +46,7 @@ const Home = ({ slideForward }) => {
 					<p><a href="https://linkedin.com/in/davidjohnwoolf" target="_blank">linkedin.com/in/davidjohnwoolf</a></p>
 				</section>
 			</div>
+			
 		</div>
 	);
 	

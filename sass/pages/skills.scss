@@ -1,75 +1,87 @@
-#skills {
-	.skills-sections {
+.skills {
 
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-gap: 1rem;
-		grid-template-rows: auto;
+	.fixed-bg {
+		background: $skills-primary;
+	}
 
-		@include media-sm-plus {
+	.header nav a.link-skills {
+		color: $black;
+		border-bottom: .25rem $black solid;
+	}
+
+	#skills {
+		.skills-sections {
+
 			display: grid;
-			grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: 1fr;
 			grid-gap: 1rem;
-		}
+			grid-template-rows: auto;
 
-		> section {
+			@include media-sm-plus {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-gap: 1rem;
+			}
 
-			.graph-bar {
-				margin: $gutter 0 0 0;
+			> section {
 
-				.bar {
-					width: 100%;
-					border: .1rem #bbb solid;
-					border-radius: $radius;
-					height: 2rem;
-					margin: 0 0 .5rem 0;
-					box-sizing: border-box;
-					background: $skills-ternary;
+				.graph-bar {
+					margin: $gutter 0 0 0;
 
-					span {
+					.bar {
+						width: 100%;
+						border: .1rem #bbb solid;
+						border-radius: $radius;
+						height: 2rem;
+						margin: 0 0 .5rem 0;
 						box-sizing: border-box;
-						display: inline-block;
-						height: 100%;
-						background: $skills-secondary;
-						color: #333;
-						padding: .3rem;
-						border-radius: .1rem 0 0 .1rem;
+						background: $skills-ternary;
+
+						span {
+							box-sizing: border-box;
+							display: inline-block;
+							height: 100%;
+							background: $skills-secondary;
+							color: #333;
+							padding: .3rem;
+							border-radius: .1rem 0 0 .1rem;
+						}
+
+						/* ========== languages ========== */
+						.bar-js { width: 80%; }
+						.bar-html { width: 75%; }
+						.bar-css { width: 71%; }
+						.bar-node { width: 55%; }
+						.bar-mongo { width: 45%; }
+						.bar-ruby { width: 35%; }
+						.bar-asp { width: 30%; }
+						.bar-postgres { width: 25%; }
+						.bar-python { width: 20%; }
+
+						/* ========== libraries ========== */
+						.bar-react { width: 60%; }
+						.bar-express { width: 48%; }
+						.bar-jquery { width: 45%; }
+						.bar-less { width: 40%; }
+						.bar-sass { width: 40%; }
+						.bar-bootstrap { width: 35%; }
+						.bar-mocha { width: 30%; }
+						.bar-mongoose { width: 30%; }
+						.bar-mithril { width: 25%; }
+						.bar-rails { width: 20%; }
+						.bar-sinatra { width: 15%; }
+						.bar-angular { width: 13%; }
+
+						/* ========== technologies ========== */
+						.bar-http { width: 50%; }
+						.bar-linux { width: 38%; }
+						.bar-git { width: 35%; }
+						.bar-webpack { width: 25%; }
+						.bar-inkscape { width: 25%; }
+						.bar-gimp { width: 22%; }
+						.bar-aws { width: 20%; }
+						.bar-gulp { width: 15%; }
 					}
-
-					/* ========== languages ========== */
-					.bar-js { width: 80%; }
-					.bar-html { width: 75%; }
-					.bar-css { width: 71%; }
-					.bar-node { width: 55%; }
-					.bar-mongo { width: 45%; }
-					.bar-ruby { width: 35%; }
-					.bar-asp { width: 30%; }
-					.bar-postgres { width: 25%; }
-					.bar-python { width: 20%; }
-
-					/* ========== libraries ========== */
-					.bar-react { width: 60%; }
-					.bar-express { width: 48%; }
-					.bar-jquery { width: 45%; }
-					.bar-less { width: 40%; }
-					.bar-sass { width: 40%; }
-					.bar-bootstrap { width: 35%; }
-					.bar-mocha { width: 30%; }
-					.bar-mongoose { width: 30%; }
-					.bar-mithril { width: 25%; }
-					.bar-rails { width: 20%; }
-					.bar-sinatra { width: 15%; }
-					.bar-angular { width: 13%; }
-
-					/* ========== technologies ========== */
-					.bar-http { width: 50%; }
-					.bar-linux { width: 38%; }
-					.bar-git { width: 35%; }
-					.bar-webpack { width: 25%; }
-					.bar-inkscape { width: 25%; }
-					.bar-gimp { width: 22%; }
-					.bar-aws { width: 20%; }
-					.bar-gulp { width: 15%; }
 				}
 			}
 		}

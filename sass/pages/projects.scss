@@ -1,43 +1,55 @@
-#projects {
-	.project-sections {
+.projects {
 
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-gap: 1rem;
-		grid-template-rows: auto;
+	.fixed-bg {
+		background: $projects-primary;
+	}
 
-		@include media-sm-plus {
-			grid-template-columns: repeat(3, 1fr);
-		}
+	.header nav a.link-projects {
+		color: $black;
+		border-bottom: .25rem $black solid;
+	}
 
-		> section {
+	#projects {
+		.project-sections {
 
-			a {
-				color: $projects-secondary;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-gap: 1rem;
+			grid-template-rows: auto;
 
-				&:hover {
-					color: $projects-primary;
+			@include media-sm-plus {
+				grid-template-columns: repeat(3, 1fr);
+			}
+
+			> section {
+
+				a {
+					color: $projects-secondary;
+
+					&:hover {
+						color: $projects-primary;
+					}
 				}
-			}
 
-			h4 {
-				margin: 0;
+				h4 {
+					margin: 0;
 
-				.dates {
-					color: $grey;
-					float: right;
-					font-weight: normal;
-					font-size: .8rem;
+					.dates {
+						color: $grey;
+						float: right;
+						font-weight: normal;
+						font-size: .8rem;
+					}
 				}
-			}
 
-			h5 {
-				font-size: 1rem;
-				margin: $gutter 0 $gutter-sm 0;
-			}
+				h5 {
+					font-size: 1rem;
+					margin: $gutter 0 $gutter-sm 0;
+				}
 
-			p {
-				margin: $gutter-sm 0;
+				p {
+					margin: $gutter-sm 0;
+				}
 			}
 		}
 	}

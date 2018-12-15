@@ -30,6 +30,10 @@ h4 {
 	margin: $gutter-sm 0 $gutter-xsm 0;
 }
 
+h5 {
+	
+}
+
 h6 {
 	margin: $gutter-xsm 0;
 }
@@ -41,50 +45,23 @@ p {
 .app-container {
 	height: 100%;
 	width: 100%;
-	transition: $transition;
 
-	&.skills {
-		background: $skills-primary;
-
-		.link-skills {
-			color: $black;
-			border-bottom: .25rem $black solid;
-		}
+	.fixed-bg {
+		transition: $transition;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: -10;
 	}
-
-	&.experience {
-		background: $experience-primary;
-
-		.link-experience {
-			color: $black;
-			border-bottom: .25rem $black solid;
-		}
-	}
-
-	&.projects {
-		background: $projects-primary;
-
-		.link-projects {
-			color: $black;
-			border-bottom: .25rem $black solid;
-		}
-	}
-
-	&.contact {
-		background: $contact-primary;
-
-		.link-contact {
-			color: $black;
-			border-bottom: .25rem $black solid;
-		}
-	}
-
 
 	/* ========== header ========== */
 
 	.header {
 		display: flex;
 		justify-content: space-between;
+		padding: $gutter $gutter 0 $gutter;
 
 		h1 {
 			font-size: 1.5rem;
@@ -134,10 +111,6 @@ p {
 				display: block;
 			}
 		}
-
-		@include media-sm-plus {
-			padding: $gutter $gutter-lg 0 $gutter-lg;
-		}
 	}
 
 
@@ -149,10 +122,6 @@ p {
 
 		> div > section {
 			background: $white;
-			padding: $gutter;
-		}
-
-		@include media-sm-plus {
 			padding: $gutter;
 		}
 	}
