@@ -19,17 +19,16 @@ const createRouter = ({ routes, container, middleware }) => {
 
 	return e => {
 
-		let data = applyMiddleware({
+		let route = applyMiddleware({
 			newRoute: e ? matchURL(e.newURL) : matchURL(window.location.hash),
 			oldRoute: e ? matchURL(e.oldURL) : null,
 			routes,
 			props: {}
 		})
 
-		//pass route and props to the container if it exists
 		return container
-			? container(data.newRoute.render(), data.props)
-			: data.newRoute.render(data.props)
+			? container(route.newRoute.render(), route.props)
+			: route.newRoute.render(route.props)
 	}
 }
 

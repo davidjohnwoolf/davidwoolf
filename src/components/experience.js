@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Experience = (props) => {
+const Experience = ({ slideForward }) => {
 
 	return (
-		<div className={ `content ${ props.slideForward ? 'f-enter' : 'b-enter' }` } id="experience">
+		<div className={ `content ${ slideForward ? 'f-enter' : 'b-enter' }` } id="experience">
 			<div className="experience-sections sections">
 				<section>
 					<h3>Full Stack Developer</h3>

@@ -1,9 +1,9 @@
 import React from 'react';
 
-const AppContainer = (child, props) => {
+const AppContainer = (child, { path, slideForward }) => {
 
 	return (
-		<div className={ `app-container ${ props.path.slice(1) || 'home' }` }>
+		<div className={ `app-container ${ path.slice(1) || 'home' }` }>
 			<header className="header">
 				<h1>David Woolf</h1>
 				<span className="menu-bar">&#9776;</span>
@@ -18,7 +18,7 @@ const AppContainer = (child, props) => {
 				</nav>
 			</header>
 			<div>
-				{ React.cloneElement(child, { ...props }) }
+				{ React.cloneElement(child, { slideForward }) }
 			</div>
 		</div>
 	)

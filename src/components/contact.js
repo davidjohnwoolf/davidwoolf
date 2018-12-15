@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Contact = (props) => {
+const Contact = ({ slideForward }) => {
 
 	return (
-		<div className={ `content ${ props.slideForward ? 'f-enter' : 'b-enter' }` } id="contact">
+		<div className={ `content ${ slideForward ? 'f-enter' : 'b-enter' }` } id="contact">
 			<div className="contact-sections sections">
 				<section>
 					<h3>Form</h3>

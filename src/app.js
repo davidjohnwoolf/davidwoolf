@@ -5,7 +5,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import createRouter from './router/create-router'
-import { setSlideDirectionOnProps, addPathToProps } from './router/middleware'
+import { addSlideDirectionToProps, addPathToProps } from './router/middleware'
 
 import AppContainer from './containers/app.container'
 
@@ -24,7 +24,7 @@ const routes = [
 ]
 
 const router = createRouter({
-	routes, container: AppContainer, middleware: [addPathToProps, setSlideDirectionOnProps]
+	routes, container: AppContainer, middleware: [addPathToProps, addSlideDirectionToProps]
 })
 
 const renderRoute = e => ReactDOM.render(router(e), document.querySelector('#app'))

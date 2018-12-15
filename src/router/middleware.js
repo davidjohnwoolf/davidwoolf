@@ -1,22 +1,20 @@
 //think of a better name
-export const setSlideDirectionOnProps = (data) => {
+export const addSlideDirectionToProps = (route) => {
 
-	if (!data.oldRoute) return data
+	if (!route.oldRoute) return route
 
-	const findPathIndex = (path) => data.routes.findIndex(c => c.path === path)
+	const findPathIndex = (path) => route.routes.findIndex(c => c.path === path)
 
 	//maybe dont mutate this
-	data.props.slideForward = findPathIndex(data.newRoute.path) > findPathIndex(data.oldRoute.path)
+	route.props.slideForward = findPathIndex(route.newRoute.path) > findPathIndex(route.oldRoute.path)
 
-	return data
+	return route
 }
 
-export const addPathToProps = (data) => {
-
-	const findPathIndex = (path) => data.routes.findIndex(c => c.path === path)
+export const addPathToProps = (route) => {
 
 	//maybe dont mutate this
-	data.props.path = data.newRoute.path
+	route.props.path = route.newRoute.path
 
-	return data
+	return route
 }

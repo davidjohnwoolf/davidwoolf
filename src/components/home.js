@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Home = (props) => {
+const Home = ({ slideForward }) => {
 
 	return (
-		<div className={ `content ${ props.slideForward ? 'f-enter' : 'b-enter' }` } id="home">
+		<div className={ `content ${ slideForward ? 'f-enter' : 'b-enter' }` } id="home">
 			<div className="home-sections sections">
 				<section className="home-picture">
 					<img src="http://placehold.it/500x500" alt="David Woolf" />

@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Projects = (props) => {
+const Projects = ({ slideForward }) => {
 
 	return (
-		<div className={ `content ${ props.slideForward ? 'f-enter' : 'b-enter' }` } id="projects">
+		<div className={ `content ${ slideForward ? 'f-enter' : 'b-enter' }` } id="projects">
 			<div className="project-sections sections">
 				<section>
 					<h3><a href="/" target="_blank">Portfolio Site</a></h3>
