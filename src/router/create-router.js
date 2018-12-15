@@ -13,7 +13,7 @@ import { pipe } from './utils'
 
 const createRouter = ({ routes, container, middleware }) => {
 
-	const matchURL = url => routes.find(c => c.path === url.split('#')[1] || null)
+	const matchURL = url => routes.find(c => c.path === url.split('#')[1])
 
 	const applyMiddleware = (data) => middleware ? pipe(...middleware)(data) : data
 
