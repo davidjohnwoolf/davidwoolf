@@ -29,7 +29,10 @@ const router = createRouter({
 })
 
 //sends router components to react
-const renderRoute = e => ReactDOM.render(router(e), document.querySelector('#app'))
+const renderRoute = e => {
+	window.scrollTo(0, 0)
+	return ReactDOM.render(router(e), document.querySelector('#app'))
+}
 
 //for initial load
 renderRoute()
