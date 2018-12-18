@@ -73,7 +73,7 @@ const Experience = ({ slideForward }) => {
 						<p>Generating leads online and coverting them into clients for a small web development company</p>
 						<div className="hug-bottom">
 							<h4>Technology</h4>
-							<p>Wordpress, Google Analytics, HTML, CSS</p>
+							<p>Google Analytics, knowledge of Wordpress, PHP, HTML, and CSS</p>
 						</div>
 					</div>
 				</section>
