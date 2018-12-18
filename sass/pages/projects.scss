@@ -5,8 +5,7 @@
 	}
 
 	.header nav a.link-projects {
-		color: $black;
-		border-bottom: .25rem $black solid;
+		@extend %selected;
 	}
 
 	#projects {
@@ -20,17 +19,11 @@
 
 			> section {
 
-			h4.section-top-title a:nth-child(2) {
-				float: right;
-			}
-
-				a {
-					color: $projects-secondary;
-
-					&:hover {
-						color: $projects-primary;
-					}
+				h4.section-top-title a:nth-child(2) {
+					float: right;
 				}
+
+				@include pageLinks($projects-primary, $projects-secondary);
 			}
 		}
 	}

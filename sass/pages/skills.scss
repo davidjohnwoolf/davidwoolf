@@ -5,8 +5,7 @@
 	}
 
 	.header nav a.link-skills {
-		color: $black;
-		border-bottom: .25rem $black solid;
+		@extend %selected;
 	}
 
 	#skills {

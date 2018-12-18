@@ -95,11 +95,6 @@ p {
 						&:hover {
 							color: $black;
 						}
-
-						&.selected {
-							color: $black;
-							border-bottom: 5px $black solid;
-						}
 					}
 				}
 			}

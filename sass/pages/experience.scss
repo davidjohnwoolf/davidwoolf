@@ -5,8 +5,7 @@
 	}
 
 	.header nav a.link-experience {
-		color: $black;
-		border-bottom: .25rem $black solid;
+		@extend %selected;
 	}
 
 	#experience {
@@ -19,13 +18,7 @@
 			}
 
 			> section {
-				a {
-					color: $experience-secondary;
-
-					&:hover {
-						color: $experience-primary;
-					}
-				}
+				@include pageLinks($experience-primary, $experience-secondary);
 
 				h4 .dates {
 					color: $grey;

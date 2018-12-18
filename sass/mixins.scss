@@ -1,4 +1,22 @@
-//Media Queries
+/* ========== content ========== */
+
+@mixin pageLinks($primary, $secondary) {
+  a {
+    color: $secondary;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+%selected {
+  color: $black;
+  border-bottom: 5px $black solid;
+}
+
+
+/* ========== media queries ========== */
 
 @mixin media-sm-minus {
   @media (max-width: #{$break-sm - 1px}) {
@@ -59,4 +77,3 @@
     @content;
   }
 }
-

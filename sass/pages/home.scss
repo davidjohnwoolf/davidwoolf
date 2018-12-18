@@ -5,8 +5,7 @@
 	}
 
 	.header nav a.link-home {
-		color: $black;
-		border-bottom: .25rem $black solid;
+		@extend %selected;
 	}
 
 	#home {
@@ -36,14 +35,7 @@
 
 			> section {
 
-				a {
-					color: $home-secondary;
-					transition: $transition;
-
-					&:hover {
-						color: $home-primary;
-					}
-				}
+				@include pageLinks($home-primary, $home-secondary);
 
 				&.home-picture {
 					grid-area: picture;

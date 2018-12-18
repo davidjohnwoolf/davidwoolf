@@ -5,8 +5,7 @@
 	}
 
 	.header nav a.link-contact {
-		color: $black;
-		border-bottom: .25rem $black solid;
+		@extend %selected;
 	}
 
 	#contact {
@@ -27,6 +26,8 @@
 
 			> section {
 
+				@include pageLinks($contact-primary, $contact-secondary);
+
 				&.contact-form {
 					grid-area: form;
 				}
@@ -40,14 +41,6 @@
 
 					img {
 						max-width: 100%;
-					}
-				}
-
-				a {
-					color: $contact-secondary;
-
-					&:hover {
-						color: $contact-primary;
 					}
 				}
 			}
