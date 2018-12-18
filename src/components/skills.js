@@ -22,7 +22,7 @@ const Skills = ({ slideForward }) => {
 					</div>
 				</section>
 				<section className="skills-libs">
-					<h3>Libraries/Frameworks</h3>
+					<h3>Libraries</h3>
 					<div className="section-content">
 						<section className="graph-bar">
 							<div className="bar"><span className="bar-jquery">jQuery</span></div>

@@ -66,11 +66,10 @@ p {
 	/* ========== header ========== */
 
 	.header {
-		padding: $gutter $gutter-xsm 0 $gutter-xsm;
+		padding: $gutter $gutter 0 $gutter;
 
 		.page-heading {
-			margin: 0 auto;
-			display: table;
+			text-align: center;
 
 			h1 {
 				font-size: 1.5rem;
@@ -96,60 +95,6 @@ p {
 			@include media-sm-plus {
 				display: block;
 				margin: 0;
-			}
-		}
-
-		.previous {
-			border-radius: .3rem 0 0 .3rem;
-			font-size: 1rem;
-			padding: $gutter-sm;
-			color: $black;
-			background: $white;
-			transition: $transition;
-			position: fixed;
-			left: .25rem;
-			top: 2rem;
-			z-index: 20;
-
-			&:hover {
-				color: $white;
-				background: $black;
-
-				&[disabled] {
-					color: $black;
-					background: $white;
-				}
-			}
-
-			&[disabled] {
-				opacity: .3;
-			}
-		}
-
-		.next {
-			border-radius:  0 .3rem .3rem 0;
-			font-size: 1rem;
-			padding: $gutter-sm;
-			color: $black;
-			background: $white;
-			transition: $transition;
-			position: fixed;
-			right: .25rem;
-			top: 2rem;
-			z-index: 20;
-
-			&:hover {
-				color: $white;
-				background: $black;
-
-				&[disabled] {
-					color: $black;
-					background: $white;
-				}
-			}
-
-			&[disabled] {
-				opacity: .3;
 			}
 		}
 
@@ -188,10 +133,54 @@ p {
 	/* ========== footer ========== */
 
 	.footer {
+
+		.previous {
+			font-size: 1rem;
+			line-height: 1rem;
+			padding: $gutter;
+			color: $white;
+			background: $black;
+			transition: $transition;
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			z-index: 20;
+
+			&:hover {
+				color: $black;
+				background: $white;
+			}
+
+			&[disabled] {
+				visibility: hidden;
+			}
+		}
+
+		.next {
+			font-size: 1rem;
+			line-height: 1rem;
+			padding: $gutter;
+			color: $white;
+			background: $black;
+			transition: $transition;
+			position: fixed;
+			right: 0;
+			bottom: 0;
+			z-index: 20;
+
+			&:hover {
+				color: $black;
+				background: $white;
+			}
+
+			&[disabled] {
+				visibility: hidden;
+			}
+		}
+
 		nav {
 			background: $black;
 			text-align: center;
-			padding: $gutter-xsm;
 			position: fixed;
 			bottom: 0;
 			left: 0;
@@ -201,13 +190,43 @@ p {
 				display: inline-block;
 
 				a {
-					background: $white;
-					border-radius: 50%;
-					width: 1rem;
-					height: 1rem;
-					display: block;
-					margin: .5rem;
-					transition: $transition;
+					display: inline-block;
+					padding: $gutter .8rem;
+					margin: 0;
+					height: 3rem;
+
+					span {
+						background-color: $white;
+						border-radius: 50%;
+						width: 1rem;
+						height: 1rem;
+						display: inline-block;
+						transition: $transition;
+					}
+
+					&.link-home:hover span {
+						background: $home-primary;
+					}
+
+					&.link-skills:hover span {
+						background: $skills-primary;
+					}
+
+					&.link-experience:hover span {
+						background: $experience-primary;
+					}
+
+					&.link-projects:hover span {
+						background: $projects-primary;
+					}
+
+					&.link-contact:hover span {
+						background: $contact-primary;
+					}
+
+					@include media-xs-plus {
+						padding: $gutter 1.5rem;
+					}
 				}
 			}
 		}
@@ -218,7 +237,8 @@ p {
 
 	.content {
 
-		padding: $gutter $gutter-lg;
+		padding: $gutter;
+		margin-bottom: 48px;
 
 		.sections {
 			display: grid;
@@ -244,6 +264,10 @@ p {
 				}
 			}
 		}
+
+		@include media-sm-plus {
+			margin-bottom: 0;
+		}
 	}
 }
 
@@ -252,14 +276,18 @@ p {
 
 .f-enter {
 	transform: translateX(100%);
-    animation: slide-in 0.5s forwards;
+    animation: slide-in-front 0.3s forwards;
 }
 
 .b-enter {
 	transform: translateX(-100%);
-    animation: slide-in 0.5s forwards;
+    animation: slide-in-back 0.3s forwards;
 }
     
-@keyframes slide-in {
+@keyframes slide-in-front {
+    100% { transform: translateX(0%); }
+}
+
+@keyframes slide-in-back {
     100% { transform: translateX(0%); }
 }

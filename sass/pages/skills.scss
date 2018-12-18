@@ -8,7 +8,7 @@
 		@extend %selected;
 	}
 
-	.footer nav li a.link-skills {
+	.footer nav li a.link-skills span {
 		background: $skills-primary;
 	}
 
@@ -18,9 +18,7 @@
 			grid-template-rows: auto;
 
 			@include media-sm-plus {
-				display: grid;
 				grid-template-columns: repeat(3, 1fr);
-				grid-gap: 1rem;
 			}
 
 			> section {
@@ -47,13 +45,13 @@
 						}
 
 						/* ========== languages ========== */
-						.bar-js { width: 80%; }
-						.bar-html { width: 75%; }
-						.bar-css { width: 71%; }
-						.bar-node { width: 55%; }
-						.bar-mongo { width: 45%; }
-						.bar-ruby { width: 35%; }
-						.bar-asp { width: 30%; }
+						.bar-js { width: 75%; }
+						.bar-html { width: 70%; }
+						.bar-css { width: 65%; }
+						.bar-node { width: 43%; }
+						.bar-mongo { width: 35%; }
+						.bar-ruby { width: 30%; }
+						.bar-asp { width: 28%; }
 						.bar-postgres { width: 25%; }
 						.bar-python { width: 20%; }
 

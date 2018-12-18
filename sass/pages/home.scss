@@ -8,7 +8,7 @@
 		@extend %selected;
 	}
 
-	.footer nav li a.link-home {
+	.footer nav li a.link-home span {
 		background: $home-primary;
 	}
 

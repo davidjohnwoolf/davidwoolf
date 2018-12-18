@@ -23,9 +23,6 @@ const Contact = ({ slideForward }) => {
 						<a href="https://linkedin.com/in/davidjohnwoolf" target="_blank">linkedin.com/in/davidjohnwoolf</a>
 					</div>
 				</section>
-				<section className="contact-graphic">
-					<img src="http://placehold.it/800x200" alt="goodbye" />
-				</section>
 			</div>
 		</div>
 	);

@@ -8,7 +8,7 @@
 		@extend %selected;
 	}
 
-	.footer nav li a.link-contact {
+	.footer nav li a.link-contact span {
 		background: $contact-primary;
 	}
 
@@ -18,14 +18,12 @@
 			grid-template-rows: auto;
 			grid-template-areas:
 					"form"
-					"info"
-					"graphic";
+					"info";
 
 			@include media-sm-plus {
 				grid-template-columns: repeat(4, 1fr);
 				grid-template-areas:
-					"form form info info"
-					"graphic graphic graphic graphic";
+					"form form info info";
 			}
 
 			> section {
@@ -38,14 +36,6 @@
 
 				&.contact-info {
 					grid-area: info;
-				}
-
-				&.contact-graphic {
-					grid-area: graphic;
-
-					img {
-						max-width: 100%;
-					}
 				}
 			}
 		}
