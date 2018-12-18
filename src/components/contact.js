@@ -10,8 +10,8 @@ const Contact = ({ slideForward }) => {
 				</section>
 				<section className="contact-info">
 					<h3>Contact</h3>
-					<div class="section-content">
-						<h4 className="section-top-title">Email</h4>
+					<div className="section-content">
+						<h4>Email</h4>
 						<a href="mailto:davidjohnwoolf@gmail.com">davidjohnwoolf@gmail.com</a>
 						<h4>Phone</h4>
 						<a href="tel:8016339105">801.633.9105</a>

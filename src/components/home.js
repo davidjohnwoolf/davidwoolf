@@ -10,36 +10,39 @@ const Home = ({ slideForward }) => {
 				</section>
 				<section className="home-summary">
 					<h3>Introduction</h3>
-					<div class="section-content">
+					<div className="section-content">
 						<p>
-							I am a web developer who loves coding.  My prefered stack is React, Node, Express, and MongoDB, but I also enjoy Ruby with either Rails or Sinatra, and have an interest in learing more Angular and Python.  My personal focus right now is in mastering the functional paradigm, and I plan to learn Haskel this year to further my grasp.
+							I am a web developer who loves coding.  My prefered stack is React, Node, Express, and MongoDB, but I also enjoy Ruby with either Rails or Sinatra, and have an interest in learing more Angular and Python.
+						</p>
+						<p>
+							My personal focus right now is enhancing my functional programming skills by learning Haskel.
 						</p>
 					</div>
 				</section>
 				<section className="home-training">
-					<h3>Education/Achievements</h3>
-					<div class="section-content">
+					<h3>Training</h3>
+					<div className="section-content">
 						<section>
-							<h4 className="section-top-title">JavaScript Code School - Portland Code School</h4>
-							<p>A part time 12 week course focusing on JavaScript using jQuery, Backbone, Node, Express, and MongoDB from Portland Code School.</p>
+							<h4><a href="http://www.portlandcodeschool.com/">Node/JS Code School - Portland Code School</a></h4>
+							<p>A part time 12 week course focusing on Node, JavaScript, Express, jQuery, Backbone, and MongoDB from Portland Code School.</p>
 						</section>
 						<section>
-							<h4>Ruby Code School - DevPoint Labs</h4>
-							<p>A full time 12 week code school focusing on Ruby, Rails, Sinatra, and various front end technologies from .</p>
+							<h4><a href="http://www.devpointlabs.com/">Ruby Code School - DevPoint Labs</a></h4>
+							<p>A full time 12 week code school focusing on Ruby, Rails, Sinatra, and various front end technologies from Devpoint Labs.</p>
 						</section>
 						<section>
-							<h4>Web Developer Certificate - Windows</h4>
+							<h4><a href="">Web Developer Certificate - Windows</a></h4>
 							<p>Programming in HTML5 with JavaScript and CSS3</p>
 						</section>
 						<section>
-							<h4>JavaScript Certificate - W3 Schools</h4>
-							<p>Including Advanced JavaScript, other one, etc</p>
+							<h4><a href="">JavaScript Certificate - W3 Schools</a></h4>
+							<p>BLANK____</p>
 						</section>
 					</div>
 				</section>
 				<section className="home-contact">
 					<h3>About</h3>
-					<div class="section-content">
+					<div className="section-content">
 						<p>
 							I started exploring web technologies in 2008 and it soon turned into a hobbie and later a career.
 						</p>

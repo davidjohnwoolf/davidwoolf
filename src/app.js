@@ -1,11 +1,12 @@
-//import css for webpack
+//import css and image for webpack
 require('../sass/base.scss')
+require('../public/img/david-woolf.jpg')
 
 import React from 'react'
 import ReactDOM from 'react-dom'
 
 import createRouter from './router/create-router'
-import { addSlideDirectionToProps, addPathToProps } from './router/middleware'
+import { addSlideDirectionToProps, addPathsToProps } from './router/middleware'
 
 import AppContainer from './containers/app.container'
 
@@ -24,7 +25,7 @@ const routes = [
 ]
 
 const router = createRouter({
-	routes, container: AppContainer, middleware: [addPathToProps, addSlideDirectionToProps]
+	routes, container: AppContainer, middleware: [addPathsToProps, addSlideDirectionToProps]
 })
 
 //sends router components to react

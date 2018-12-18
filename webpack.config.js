@@ -1,4 +1,5 @@
 const path = require('path');
+const fileLoader = require('file-loader');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -26,6 +27,17 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/,
                 loaders: ['babel-loader'],
+                exclude: /node_modules/
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[path][name].[ext]',
+                        publicPath: '/img/'
+                    }
+                },
                 exclude: /node_modules/
             }
         ],

@@ -11,7 +11,7 @@ const createRouter = ({ routes, container, middleware }) => {
 	return e => {
 
 		//build route data with middleware
-		let route = applyMiddleware({
+		const route = applyMiddleware({
 			newRoute: e ? matchURL(e.newURL) : matchURL(window.location.hash),
 			oldRoute: e ? matchURL(e.oldURL) : null,
 			routes,

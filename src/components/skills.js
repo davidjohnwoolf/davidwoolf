@@ -7,7 +7,7 @@ const Skills = ({ slideForward }) => {
 			<div className="skills-sections sections">
 				<section className="skills-lang">
 					<h3>Languages</h3>
-					<div class="section-content">
+					<div className="section-content">
 						<section className="graph-bar">
 							<div className="bar"><span className="bar-js">JavaScript</span></div>
 							<div className="bar"><span className="bar-html">HTML</span></div>
@@ -23,7 +23,7 @@ const Skills = ({ slideForward }) => {
 				</section>
 				<section className="skills-libs">
 					<h3>Libraries/Frameworks</h3>
-					<div class="section-content">
+					<div className="section-content">
 						<section className="graph-bar">
 							<div className="bar"><span className="bar-jquery">jQuery</span></div>
 							<div className="bar"><span className="bar-react">React/Redux</span></div>
@@ -42,7 +42,7 @@ const Skills = ({ slideForward }) => {
 				</section>
 				<section className="skills-tech">
 					<h3>Technologies</h3>
-					<div class="section-content">
+					<div className="section-content">
 						<section className="graph-bar">
 							<div className="bar"><span className="bar-http">HTTP</span></div>
 							<div className="bar"><span className="bar-linux">Linux</span></div>

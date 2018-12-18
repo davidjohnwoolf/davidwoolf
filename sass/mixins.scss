@@ -1,79 +1,80 @@
-/* ========== content ========== */
-
-@mixin pageLinks($primary, $secondary) {
-  a {
-    color: $secondary;
-
-    &:hover {
-      color: $primary;
-    }
-  }
-}
-
-%selected {
-  color: $black;
-  border-bottom: 5px $black solid;
-}
-
-
 /* ========== media queries ========== */
 
 @mixin media-sm-minus {
-  @media (max-width: #{$break-sm - 1px}) {
-    @content;
-  }
+	@media (max-width: #{$break-sm - 1px}) {
+		@content;
+	}
 }
 
 @mixin media-xs {
-  @media (min-width: #{$break-xs}) and (max-width: #{$break-sm - 1px}) {
-    @content;
-  }
+	@media (min-width: #{$break-xs}) and (max-width: #{$break-sm - 1px}) {
+		@content;
+	}
 }
 
 @mixin media-xs-plus {
-  @media (min-width: #{$break-xs}) {
-    @content;
-  }
+	@media (min-width: #{$break-xs}) {
+		@content;
+	}
 }
 
 @mixin media-sm {
-  @media (min-width: #{$break-sm}) and (max-width: #{$break-md - 1px}) {
-    @content;
-  }
+	@media (min-width: #{$break-sm}) and (max-width: #{$break-md - 1px}) {
+		@content;
+	}
 }
 
 @mixin media-sm-plus {
-  @media (min-width: #{$break-sm}) {
-    @content;
-  }
+	@media (min-width: #{$break-sm}) {
+		@content;
+	}
 }
 
 @mixin media-md {
-  @media (min-width: #{$break-md}) and (max-width: #{$break-lg - 1px}) {
-    @content;
-  }
+	@media (min-width: #{$break-md}) and (max-width: #{$break-lg - 1px}) {
+		@content;
+	}
 }
 
 @mixin media-md-plus {
-  @media (min-width: #{$break-md}) {
-    @content;
-  }
+	@media (min-width: #{$break-md}) {
+		@content;
+	}
 }
 
 @mixin media-lg {
-  @media (min-width: #{$break-lg}) and (max-width: #{$break-xl - 1px}) {
-    @content;
-  }
+	@media (min-width: #{$break-lg}) and (max-width: #{$break-xl - 1px}) {
+		@content;
+	}
 }
 
 @mixin media-lg-plus {
-  @media (min-width: #{$break-lg}) {
-    @content;
-  }
+	@media (min-width: #{$break-lg}) {
+		@content;
+	}
 }
 
 @mixin media-xl-plus {
-  @media (min-width: #{$break-xl}) {
-    @content;
-  }
+	@media (min-width: #{$break-xl}) {
+		@content;
+	}
+}
+
+/* ========== content ========== */
+
+@mixin pageLinks($primary, $secondary) {
+	a {
+		color: $secondary;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+}
+
+%selected {
+	@include media-sm-plus {
+		color: $black;
+		border-bottom: 5px $black solid;
+	}
 }

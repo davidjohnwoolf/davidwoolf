@@ -39,7 +39,7 @@
 
 				&.home-picture {
 					grid-area: picture;
-					background: url(http://placehold.it/500x500);
+					background: url('/public/img/david-woolf.jpg');
 					background-position: center;
 					background-size: cover;
 
@@ -60,10 +60,6 @@
 
 				&.home-contact {
 					grid-area: contact;
-				}
-
-				h4 {
-					text-decoration: underline;
 				}
 			}
 		}

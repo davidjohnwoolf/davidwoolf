@@ -1,14 +1,21 @@
-import React from 'react';
+import React from 'react'
 
-const AppContainer = (child, { path, slideForward }) => {
+const AppContainer = (child, { path, slideForward, previousPath, nextPath }) => {
 
 	return (
 		<div className={ `app-container ${ path.slice(1) || 'home' }` }>
 			<div className="fixed-bg"></div>
 			<header className="header">
-				<h1>David Woolf</h1>
-				<span className="menu-bar">&#9776;</span>
-				<nav>
+				<a className="mobile previous" disabled={ !previousPath } href={ previousPath }>&#10094;</a>
+
+				<div className="page-heading">
+					<h1><a href="#/">David Woolf</a></h1>
+					<h2 className="mobile">{ previousPath ? path.slice(1, 2).toUpperCase() + path.slice(2) : 'Home' }</h2>
+				</div>
+
+				<a className="mobile next" disabled={ !nextPath }  href={ nextPath }>&#10095;</a>
+
+				<nav className="not-mobile">
 					<ul>
 						<li><a className="link-home" href="#/">Home</a></li>
 						<li><a className="link-skills" href="#/skills">Skills</a></li>
@@ -20,6 +27,8 @@ const AppContainer = (child, { path, slideForward }) => {
 			</header>
 			<div>
 				{ React.cloneElement(child, { slideForward }) }
+
+				<div className="footer"></div>
 			</div>
 		</div>
 	)
