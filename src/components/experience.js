@@ -10,7 +10,7 @@ const Experience = ({ slideForward }) => {
 					<div class="section-content">
 						<h4 className="section-top-title"><a href="https://www.dealerspike.com/" target="_blank">Kaizen Renewables</a> <span className="dates">Feb 2018 - Nov 2018</span></h4>
 						<h4>Duty</h4>
-						<p>Building a custom CRM for door to door sales that lets users track leads through lists, filters, and a location based map interface, and lets managers and admins manage leads, users and sections of map assigned to users called areas that define the bounderies of their knocking territories</p>
+						<p>Building a CRM for door to door sales that lets users track leads through lists, filters, and a location based map interface using tiered user privileges</p>
 						<h4>Technology</h4>
 						<p>JavaScipt (ES6) with React/Redux, Node with Express, MongoDB with Mongoose, HTML5, CSS3 with Sass, Webpack, JSON Web Tokens, and the Google Maps API</p>
 						<div>

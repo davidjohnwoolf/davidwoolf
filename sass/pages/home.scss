@@ -61,6 +61,10 @@
 				&.home-contact {
 					grid-area: contact;
 				}
+
+				h4 {
+					text-decoration: underline;
+				}
 			}
 		}
 	}

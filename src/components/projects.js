@@ -8,7 +8,7 @@ const Projects = ({ slideForward }) => {
 				<section>
 					<h3>Portfolio Site</h3>
 					<div class="section-content">
-						<h4 className="section-top-title"><a href="/" target="_blank">Website</a> <a href="https://github.com/davidjohnwoolf/davidjohnwoolf" target="_blank">Github</a></h4>
+						<h4 className="section-top-title"><a href="https://github.com/davidjohnwoolf/davidjohnwoolf" target="_blank">Github</a></h4>
 						<h5>Description</h5>
 						<p>A simple portfolio website to showcase my skills as a developer (you are looking at it now).</p>
 						
