@@ -8,6 +8,10 @@
 		@extend %selected;
 	}
 
+	.footer nav li a.link-skills {
+		background: $skills-primary;
+	}
+
 	#skills {
 		.skills-sections {
 			grid-template-columns: 1fr;

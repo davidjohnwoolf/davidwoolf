@@ -8,6 +8,10 @@
 		@extend %selected;
 	}
 
+	.footer nav li a.link-projects {
+		background: $projects-primary;
+	}
+
 	#projects {
 		.project-sections {
 			grid-template-columns: 1fr;

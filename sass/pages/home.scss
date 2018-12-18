@@ -8,6 +8,10 @@
 		@extend %selected;
 	}
 
+	.footer nav li a.link-home {
+		background: $home-primary;
+	}
+
 	#home {
 		.home-sections {
 			grid-template-columns: 1fr;

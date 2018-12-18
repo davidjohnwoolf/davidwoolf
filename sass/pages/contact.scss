@@ -8,6 +8,10 @@
 		@extend %selected;
 	}
 
+	.footer nav li a.link-contact {
+		background: $contact-primary;
+	}
+
 	#contact {
 		.contact-sections {
 			grid-template-columns: 1fr;

@@ -8,6 +8,10 @@
 		@extend %selected;
 	}
 
+	.footer nav li a.link-experience {
+		background: $experience-primary;
+	}
+
 	#experience {
 		.experience-sections {
 			grid-template-columns: 1fr;
