@@ -11,10 +11,7 @@
 
 	#skills {
 		.skills-sections {
-
-			display: grid;
 			grid-template-columns: 1fr;
-			grid-gap: 1rem;
 			grid-template-rows: auto;
 
 			@include media-sm-plus {
@@ -26,7 +23,6 @@
 			> section {
 
 				.graph-bar {
-					margin: $gutter 0 0 0;
 
 					.bar {
 						width: 100%;
@@ -59,9 +55,9 @@
 						.bar-python { width: 20%; }
 
 						/* ========== libraries ========== */
-						.bar-react { width: 60%; }
-						.bar-express { width: 48%; }
-						.bar-jquery { width: 45%; }
+						.bar-jquery { width: 55%; }
+						.bar-react { width: 45%; }
+						.bar-express { width: 42%; }
 						.bar-less { width: 40%; }
 						.bar-sass { width: 40%; }
 						.bar-bootstrap { width: 35%; }

@@ -14,6 +14,7 @@
 
 body {
 	font-family: $font-family;
+	font-size: 1rem;
 }
 
 a {
@@ -21,17 +22,13 @@ a {
 	transition: $transition;
 }
 
-h3 {
-	border-bottom: 2px $black solid;
-	margin: 0 0 $gutter 0;
-}
-
 h4 {
-	margin: $gutter-sm 0 $gutter-xsm 0;
+	margin: $gutter 0 $gutter-sm 0;
 }
 
 h5 {
-	
+	font-size: 1rem;
+	margin: $gutter 0 $gutter-sm 0;
 }
 
 h6 {
@@ -39,7 +36,7 @@ h6 {
 }
 
 p {
-	margin: $gutter-sm 0 $gutter-xsm 0;
+	margin: $gutter-sm 0;
 }
 
 .app-container {
@@ -120,9 +117,29 @@ p {
 
 		padding: $gutter;
 
-		> div > section {
-			background: $white;
-			padding: $gutter;
+		.sections {
+			display: grid;
+			grid-gap: 1rem;
+
+			> section {
+				background: $white;
+				box-shadow: 0 0 .5rem rgba(0, 0, 0, .3);
+
+				h3 {
+					text-align: center;
+					color: $white;
+					background: $black;
+					padding: $gutter-sm;
+					margin: 0;
+				}
+				h4.section-top-title {
+					margin-top: 0;
+				}
+
+				.section-content {
+					padding: $gutter;
+				}
+			}
 		}
 	}
 }

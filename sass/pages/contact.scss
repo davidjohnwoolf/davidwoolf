@@ -11,10 +11,7 @@
 
 	#contact {
 		.contact-sections {
-
-			display: grid;
 			grid-template-columns: 1fr;
-			grid-gap: 1rem;
 			grid-template-rows: auto;
 			grid-template-areas:
 					"form"
@@ -52,19 +49,6 @@
 					&:hover {
 						color: $contact-primary;
 					}
-				}
-
-				h4 {
-					margin: $gutter 0 $gutter-sm 0;
-				}
-
-				h5 {
-					font-size: 1rem;
-					margin: $gutter 0 $gutter-sm 0;
-				}
-
-				p {
-					margin: $gutter-sm 0;
 				}
 			}
 		}

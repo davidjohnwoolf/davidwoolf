@@ -11,10 +11,7 @@
 
 	#experience {
 		.experience-sections {
-
-			display: grid;
 			grid-template-columns: 1fr;
-			grid-gap: 1rem;
 			grid-template-rows: auto;
 
 			@include media-sm-plus {
@@ -22,7 +19,6 @@
 			}
 
 			> section {
-
 				a {
 					color: $experience-secondary;
 
@@ -31,25 +27,13 @@
 					}
 				}
 
-				h4 {
-					margin: 0;
-
-					.dates {
-						color: $grey;
-						float: right;
-						font-weight: normal;
-						font-size: .8rem;
-					}
+				h4 .dates {
+					color: $grey;
+					float: right;
+					font-weight: normal;
+					font-size: .8rem;
 				}
 
-				h5 {
-					font-size: 1rem;
-					margin: $gutter 0 $gutter-sm 0;
-				}
-
-				p {
-					margin: $gutter-sm 0;
-				}
 			}
 		}
 	}

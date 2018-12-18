@@ -11,10 +11,7 @@
 
 	#projects {
 		.project-sections {
-
-			display: grid;
 			grid-template-columns: 1fr;
-			grid-gap: 1rem;
 			grid-template-rows: auto;
 
 			@include media-sm-plus {
@@ -23,32 +20,16 @@
 
 			> section {
 
+			h4.section-top-title a:nth-child(2) {
+				float: right;
+			}
+
 				a {
 					color: $projects-secondary;
 
 					&:hover {
 						color: $projects-primary;
 					}
-				}
-
-				h4 {
-					margin: 0;
-
-					.dates {
-						color: $grey;
-						float: right;
-						font-weight: normal;
-						font-size: .8rem;
-					}
-				}
-
-				h5 {
-					font-size: 1rem;
-					margin: $gutter 0 $gutter-sm 0;
-				}
-
-				p {
-					margin: $gutter-sm 0;
 				}
 			}
 		}

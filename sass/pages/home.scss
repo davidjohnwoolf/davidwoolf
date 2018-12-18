@@ -11,9 +11,7 @@
 
 	#home {
 		.home-sections {
-			display: grid;
 			grid-template-columns: 1fr;
-			grid-gap: 1rem;
 			grid-template-rows: auto;
 			grid-template-areas:
 				"picture"
@@ -49,7 +47,6 @@
 
 				&.home-picture {
 					grid-area: picture;
-					padding: 0;
 					background: url(http://placehold.it/500x500);
 					background-position: center;
 					background-size: cover;
@@ -67,16 +64,6 @@
 
 				&.home-training {
 					grid-area: training;
-
-					> section {
-						h4 {
-							text-decoration: underline;
-						}
-
-						h6 {
-							color: $grey;
-						}
-					}
 				}
 
 				&.home-contact {
