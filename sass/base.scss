@@ -67,6 +67,8 @@ p {
 
 	.header {
 		padding: $gutter $gutter 0 $gutter;
+		max-width: 85rem;
+		margin: 0 auto;
 
 		.page-heading {
 			text-align: center;
@@ -99,11 +101,11 @@ p {
 		}
 
 		nav {
-			display: flex;
 
 			ul {
 				list-style-type: none;
 				padding-left: 0;
+				margin-top: .7rem;
 
 				li {
 					display: inline-block;
@@ -124,7 +126,6 @@ p {
 		@include media-sm-plus {
 			display: flex;
 			justify-content: space-between;
-			align-items: center;
 			padding: $gutter $gutter-lg 0 $gutter-lg;
 		}
 	}
@@ -238,7 +239,8 @@ p {
 	.content {
 
 		padding: $gutter;
-		margin-bottom: 48px;
+		max-width: 85rem;
+		margin: 0 auto 3rem auto;
 
 		.sections {
 			display: grid;
@@ -267,6 +269,7 @@ p {
 
 		@include media-sm-plus {
 			margin-bottom: 0;
+			padding: $gutter $gutter-lg;
 		}
 	}
 }

@@ -46,11 +46,14 @@
 					background: url('/public/img/david-woolf.jpg');
 					background-position: center;
 					background-size: cover;
+					min-height: 15rem;
+					min-width: 15rem;
+					margin: 0 auto;
 
-					@include media-sm-minus {
-						min-height: 15rem;
-						min-width: 15rem;
-						margin: 0 auto;
+					@include media-sm-plus {
+						min-height: 12rem;
+						min-width: 12rem;
+						margin: 0;
 					}
 				}
 
