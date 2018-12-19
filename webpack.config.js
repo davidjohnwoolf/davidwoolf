@@ -1,5 +1,4 @@
 const path = require('path');
-const fileLoader = require('file-loader');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -17,10 +16,7 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: extractSass.extract({
-                    use: [
-                        { loader: 'css-loader' },
-                        { loader: 'sass-loader' }
-                    ]
+                    use: ['css-loader', 'sass-loader']
                 }),
                 exclude: /node_modules/
             },

@@ -50,6 +50,12 @@
 					min-width: 15rem;
 					margin: 0 auto;
 
+					&:hover {
+						background: url('/public/img/david-woolf-hover.jpg');
+						background-position: center;
+						background-size: cover;
+					}
+
 					@include media-sm-plus {
 						min-height: 12rem;
 						min-width: 12rem;

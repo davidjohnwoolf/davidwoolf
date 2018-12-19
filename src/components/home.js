@@ -32,11 +32,15 @@ const Home = ({ slideForward }) => {
 						</section>
 						<section>
 							<h4><a href="">Web Developer Certificate - Windows</a></h4>
-							<p>Programming in HTML5 with JavaScript and CSS3</p>
+							<p>Certified in JavaScript, HTML5 and CSS3</p>
 						</section>
 						<section>
-							<h4><a href="">JavaScript Certificate - W3 Schools</a></h4>
-							<p>BLANK____</p>
+							<h4><a href="">Course Certificates - Udemy</a></h4>
+							<p>Completed courses in React, Redux, Angular, Node, and JavaScript</p>
+						</section>
+						<section>
+							<h4><a href="">Course Certificates - Lynda</a></h4>
+							<p>Completed courses in Data Structures, Object Oriented Design, and IT Security</p>
 						</section>
 					</div>
 				</section>

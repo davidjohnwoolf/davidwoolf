@@ -1,6 +1,7 @@
 //import css and image for webpack
 require('../sass/base.scss')
 require('../public/img/david-woolf.jpg')
+require('../public/img/david-woolf-hover.jpg')
 
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -17,11 +18,11 @@ import Experience from './components/experience'
 import Contact from './components/contact'
 
 const routes = [
-	{ path: '/', render: (props) => <Home props={ props } /> },
-	{ path: '/skills', render: (props) => <Skills props={ props } /> },
-	{ path: '/experience', render: (props) => <Experience props={ props } /> },
-	{ path: '/projects', render: (props) => <Projects props={ props } /> },
-	{ path: '/contact', render: (props) => <Contact props={ props } /> }
+	{ path: '/', comp: (props) => <Home props={ props } /> },
+	{ path: '/skills', comp: (props) => <Skills props={ props } /> },
+	{ path: '/experience', comp: (props) => <Experience props={ props } /> },
+	{ path: '/projects', comp: (props) => <Projects props={ props } /> },
+	{ path: '/contact', comp: (props) => <Contact props={ props } /> }
 ]
 
 const router = createRouter({

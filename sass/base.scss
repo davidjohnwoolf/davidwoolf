@@ -135,7 +135,9 @@ p {
 
 	.footer {
 
-		.previous {
+		position: relative;
+
+		%footer-nav-arrow {
 			font-size: 1rem;
 			line-height: 1rem;
 			padding: $gutter;
@@ -143,39 +145,12 @@ p {
 			background: $black;
 			transition: $transition;
 			position: fixed;
-			left: 0;
 			bottom: 0;
-			z-index: 20;
+			z-index: 25;
 
 			&:hover {
 				color: $black;
 				background: $white;
-			}
-
-			&[disabled] {
-				visibility: hidden;
-			}
-		}
-
-		.next {
-			font-size: 1rem;
-			line-height: 1rem;
-			padding: $gutter;
-			color: $white;
-			background: $black;
-			transition: $transition;
-			position: fixed;
-			right: 0;
-			bottom: 0;
-			z-index: 20;
-
-			&:hover {
-				color: $black;
-				background: $white;
-			}
-
-			&[disabled] {
-				visibility: hidden;
 			}
 		}
 
@@ -186,6 +161,16 @@ p {
 			bottom: 0;
 			left: 0;
 			right: 0;
+
+			.previous {
+				@extend %footer-nav-arrow;
+				left: 0;
+			}
+
+			.next {
+				@extend %footer-nav-arrow;
+				right: 0;
+			}
 
 			li {
 				display: inline-block;
@@ -257,6 +242,7 @@ p {
 					padding: $gutter-sm;
 					margin: 0;
 				}
+				
 				h4:first-child {
 					margin-top: 0;
 				}

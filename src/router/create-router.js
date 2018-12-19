@@ -20,8 +20,8 @@ const createRouter = ({ routes, container, middleware }) => {
 
 		//return route components
 		return container
-			? container(route.newRoute.render(), route.props)
-			: route.newRoute.render(route.props)
+			? container({ child: route.newRoute.comp(), ...route.props })
+			: route.newRoute.comp(route.props)
 	}
 }
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AppContainer = (child, { path, slideForward, previousPath, nextPath }) => {
+const AppContainer = ({ child, path, slideForward, previousPath, nextPath }) => {
 
 	return (
 		<div className={ `app-container ${ path.slice(1) || 'home' }` }>
@@ -25,19 +25,19 @@ const AppContainer = (child, { path, slideForward, previousPath, nextPath }) => 
 			<div>
 				{ React.cloneElement(child, { slideForward }) }
 
-				<div className="footer mobile">
-					<a className="previous" disabled={ !previousPath } href={ previousPath }>&#10094;</a>
+				<footer className="footer mobile">
 					<nav>
+						<a className={ `previous ${ !previousPath ? ' hidden' : '' }` } href={ previousPath }>&#10094;</a>
 						<ul>
-							<li><a title="Footer Link Home" className="link-home" href="#/"><span></span></a></li>
-							<li><a title="Footer Link Skills" className="link-skills" href="#/skills"><span></span></a></li>
-							<li><a title="Footer Link Experience" className="link-experience" href="#/experience"><span></span></a></li>
-							<li><a title="Footer Link Projects" className="link-projects" href="#/projects"><span></span></a></li>
-							<li><a title="Footer Link Contact" className="link-contact" href="#/contact"><span></span></a></li>
+							<li><a className="link-home" href="#/"><span><span className="hidden">Home</span></span></a></li>
+							<li><a className="link-skills" href="#/skills"><span><span className="hidden">Skills</span></span></a></li>
+							<li><a className="link-experience" href="#/experience"><span><span className="hidden">Experience</span></span></a></li>
+							<li><a className="link-projects" href="#/projects"><span><span className="hidden">Projects</span></span></a></li>
+							<li><a className="link-contact" href="#/contact"><span><span className="hidden">Contact</span></span></a></li>
 						</ul>
+						<a className={ `next ${ !nextPath ? ' hidden' : '' }` }  href={ nextPath }>&#10095;</a>
 					</nav>
-					<a className="next" disabled={ !nextPath }  href={ nextPath }>&#10095;</a>
-				</div>
+				</footer>
 			</div>
 		</div>
 	)
