@@ -25,9 +25,9 @@ const AppContainer = (child, { path, slideForward, previousPath, nextPath }) => 
 			<div>
 				{ React.cloneElement(child, { slideForward }) }
 
-				<div className="footer">
-					<a className="mobile previous" disabled={ !previousPath } href={ previousPath }>&#10094;</a>
-					<nav className="mobile">
+				<div className="footer mobile">
+					<a className="previous" disabled={ !previousPath } href={ previousPath }>&#10094;</a>
+					<nav>
 						<ul>
 							<li><a title="Footer Link Home" className="link-home" href="#/"><span></span></a></li>
 							<li><a title="Footer Link Skills" className="link-skills" href="#/skills"><span></span></a></li>
@@ -36,7 +36,7 @@ const AppContainer = (child, { path, slideForward, previousPath, nextPath }) => 
 							<li><a title="Footer Link Contact" className="link-contact" href="#/contact"><span></span></a></li>
 						</ul>
 					</nav>
-					<a className="mobile next" disabled={ !nextPath }  href={ nextPath }>&#10095;</a>
+					<a className="next" disabled={ !nextPath }  href={ nextPath }>&#10095;</a>
 				</div>
 			</div>
 		</div>
