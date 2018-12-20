@@ -8,19 +8,19 @@ class ContactForm extends Component {
 			email: '',
 			phone: '',
 			comment: ''
-		};
+		}
 
-		this.handleChange = this.handleChange.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleChange = this.handleChange.bind(this)
+		this.handleSubmit = this.handleSubmit.bind(this)
 	}
 
 	handleChange(e) {
-		this.setState({ [e.target.name]: e.target.value });
+		this.setState({ [e.target.name]: e.target.value })
 	}
 
 	handleSubmit(e) {
-		alert('Form Data ' + this.state);
-		e.preventDefault();
+		alert('Form Data ' + this.state)
+		e.preventDefault()
 	}
 
 	render() {

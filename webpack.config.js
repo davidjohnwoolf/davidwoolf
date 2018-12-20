@@ -10,7 +10,7 @@ const extractSass = new ExtractTextPlugin({
 
 module.exports = {
     devtool: production ? 'source-map' : '',
-    entry: ['babel-polyfill', './src/app.js'],
+    entry: ['./src/app.js'],
     module: {
         rules: [
             {
