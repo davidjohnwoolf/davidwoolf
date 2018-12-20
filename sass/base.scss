@@ -51,6 +51,19 @@ p {
 	visibility: hidden;
 }
 
+#app .invisible {
+	display: none;
+}
+
+#app .error {
+	color: $error;
+}
+
+#app .message {
+	text-align: center;
+	padding: $gutter-lg 0;
+}
+
 .app-container {
 	height: 100%;
 	width: 100%;
