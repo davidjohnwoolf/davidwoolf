@@ -15,7 +15,7 @@ const Home = ({ slideForward }) => {
 							I am a web developer who loves coding.  My prefered stack is React, Node, Express, and MongoDB, but I also enjoy Ruby with either Rails or Sinatra, and have an interest in learing more Angular and Python.
 						</p>
 						<p>
-							My current focus is in developing my functional programming through the book <em>Structure and Interpretation of Computer Programs</em>.
+							My current focus is getting through the book <em>Structure and Interpretation of Computer Programs</em>.
 						</p>
 					</div>
 				</section>

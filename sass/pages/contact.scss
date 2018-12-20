@@ -37,6 +37,38 @@
 				&.contact-info {
 					grid-area: info;
 				}
+
+				.contact-form {
+
+					> div {
+						margin-bottom: 1rem;
+
+						input, textarea {
+							padding: .5rem;
+							width: 100%;
+							border: 2px $grey-light solid;
+							border-radius: $radius;
+							box-shadow: 0 0 .3rem rgba(0, 0, 0, .2);
+						}
+
+						textarea {
+							height: 6rem;
+						}
+					}
+
+					button[type=submit] {
+						padding: $gutter-sm $gutter;
+						border: none;
+						background: $contact-secondary;
+						color: $white;
+						transition: $transition;
+
+						&:hover {
+							background: $white;
+							color: $contact-secondary;
+						}
+					}
+				}
 			}
 		}
 	}
