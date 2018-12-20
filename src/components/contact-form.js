@@ -80,7 +80,10 @@ class ContactForm extends Component {
 		const { state: { values, errors, success, formValid }, handleSubmit, handleChange } = this
 
 		return success
-			? <h4 className="message">Hey thanks.</h4>
+			? <div>
+				<p className="message">Hey thanks!</p>
+				<p className="small-message">I will get back to you soon.</p>
+			</div>
 
 			: <form className="contact-form" onSubmit={ handleSubmit }>
 				<div>
