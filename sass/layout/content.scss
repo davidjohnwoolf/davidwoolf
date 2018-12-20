@@ -1,0 +1,36 @@
+.content {
+	padding: $gutter;
+	max-width: 85rem;
+	margin: 0 auto 3rem auto;
+
+	.sections {
+		display: grid;
+		grid-gap: 1rem;
+
+		> section {
+			background: $white;
+			box-shadow: 0 0 .5rem rgba(0, 0, 0, .3);
+
+			h3 {
+				text-align: center;
+				color: $white;
+				background: $black;
+				padding: $gutter-sm;
+				margin: 0;
+			}
+
+			h4:first-child {
+				margin-top: 0;
+			}
+
+			.section-content {
+				padding: $gutter;
+			}
+		}
+	}
+
+	@include media-sm-plus {
+		margin-bottom: 0;
+		padding: $gutter $gutter-lg;
+	}
+}

@@ -1,0 +1,83 @@
+.footer {
+	position: relative;
+
+	%footer-nav-arrow {
+		font-size: 1rem;
+		line-height: 1rem;
+		padding: $gutter;
+		color: $white;
+		background: $black;
+		transition: $transition;
+		position: fixed;
+		bottom: 0;
+		z-index: 25;
+
+		&:hover {
+			color: $black;
+			background: $white;
+		}
+	}
+
+	nav {
+		background: $black;
+		text-align: center;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		.previous {
+			@extend %footer-nav-arrow;
+			left: 0;
+		}
+
+		.next {
+			@extend %footer-nav-arrow;
+			right: 0;
+		}
+
+		li {
+			display: inline-block;
+
+			a {
+				display: inline-block;
+				padding: $gutter .8rem;
+				margin: 0;
+				height: 3rem;
+
+				span {
+					background-color: $white;
+					border-radius: 50%;
+					width: 1rem;
+					height: 1rem;
+					display: inline-block;
+					transition: $transition;
+				}
+
+				&.link-home:hover span {
+					background: $home-primary;
+				}
+
+				&.link-skills:hover span {
+					background: $skills-primary;
+				}
+
+				&.link-experience:hover span {
+					background: $experience-primary;
+				}
+
+				&.link-projects:hover span {
+					background: $projects-primary;
+				}
+
+				&.link-contact:hover span {
+					background: $contact-primary;
+				}
+
+				@include media-xs-plus {
+					padding: $gutter 1.5rem;
+				}
+			}
+		}
+	}
+}
