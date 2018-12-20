@@ -36,7 +36,7 @@ class ContactForm extends Component {
 					<input type="text" name="phone" id="phone" value={ this.state.phone } placeholder="phone number" onChange={ this.handleChange } />
 				</div>
 				<div>
-					<textarea value={ this.state.value } name="comment" id="comment" placeholder="comment" onChange={ this.handleChange }  />
+					<textarea value={ this.state.value } name="comment" id="comment" placeholder="message" onChange={ this.handleChange }  />
 				</div>
 				<button type="submit">Send Message</button>
 			</form>

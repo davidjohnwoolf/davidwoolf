@@ -1,14 +1,50 @@
-const express = require('express');
-const path = require('path');
-const logger = require('morgan');
-const app = express();
+require('dotenv').config()
 
-//middleware
-if (process.env.NODE_ENV !== 'test') app.use(logger('dev'));
+const express = require('express')
+const nodemailer = require('nodemailer')
+const path = require('path')
+const logger = require('morgan')
+const app = express()
 
-app.use(express.static(path.join(__dirname, 'dist')));
+const transporter = nodemailer.createTransport({
+	service: 'gmail',
+	auth: {
+		user: process.env.USER,
+		pass: process.env.PASS
+	}
+})
 
-//start server
-app.listen(process.env.PORT || 8080, () => console.log('listening...'));
+app.use(logger('dev'))
 
-module.exports = app;
+app.use(express.static(path.join(__dirname, 'dist')))
+
+app.use(express.json())
+
+app.use(express.urlencoded({ extended: false }));
+
+app.post('/contact', (req, res) => {
+
+	const emailTemplate = ({ name, email, phone, comment }) => {
+		return {
+			from: email,
+			to: 'davidjohnwoolf@gmail.com',
+			subject: 'Contact Message - davidwoolf.info',
+			text: `Name: ${ name }\nEmail: ${ email }\nPhone: ${ phone || 'NA' }\nComment: ${ comment }`
+		}
+	}
+
+	if (req.body.name && req.body.email && req.body.comment) {
+
+		return transporter.sendMail(emailTemplate(req.body), (err, info) => {
+			if (err) return res.json({ status: 'error', message: 'transporter.sendMail failed', data: err })
+
+			return res.json({ status: 'success', data: { message: 'Email sent successfully', info } })
+		})
+	}
+
+	return res.json({ status: 'failure', data: { message: 'Error: Request body missing name, email, or comment' } })
+})
+
+app.listen(process.env.PORT || 8080, () => console.log('listening...'))
+
+module.exports = app

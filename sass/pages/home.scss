@@ -43,7 +43,7 @@
 
 				&.home-picture {
 					grid-area: picture;
-					background: url('/public/img/david-woolf.jpg');
+					background: url('/assets/img/david-woolf.jpg');
 					background-position: center;
 					background-size: cover;
 					min-height: 15rem;
@@ -51,7 +51,7 @@
 					margin: 0 auto;
 
 					&:hover {
-						background: url('/public/img/david-woolf-hover.jpg');
+						background: url('/assets/img/david-woolf-hover.jpg');
 						background-position: center;
 						background-size: cover;
 					}

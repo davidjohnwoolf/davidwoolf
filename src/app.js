@@ -1,7 +1,7 @@
 //import css and image for webpack
 require('../sass/base.scss')
-require('../public/img/david-woolf.jpg')
-require('../public/img/david-woolf-hover.jpg')
+require('../assets/img/david-woolf.jpg')
+require('../assets/img/david-woolf-hover.jpg')
 
 import React from 'react'
 import ReactDOM from 'react-dom'
