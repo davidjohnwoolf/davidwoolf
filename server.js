@@ -9,7 +9,7 @@ const app = express()
 const transporter = nodemailer.createTransport({
 	service: 'gmail',
 	auth: {
-		user: process.env.USER,
+		user: process.env.EMAIL,
 		pass: process.env.PASS
 	}
 })
@@ -36,11 +36,15 @@ app.post('/contact', (req, res) => {
 	if (req.body.name && req.body.email && req.body.comment) {
 
 		return transporter.sendMail(emailTemplate(req.body), (err, info) => {
+			console.log('error', err)
+
 			if (err) return res.json({ status: 'error', message: 'transporter.sendMail failed', data: err })
 
 			return res.json({ status: 'success', data: { message: 'Email sent successfully', info } })
 		})
 	}
+
+	console.log(req.body)
 
 	return res.json({ status: 'failure', data: { message: 'Error: Request body missing name, email, or comment' } })
 })
