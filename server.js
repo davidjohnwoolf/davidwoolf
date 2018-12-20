@@ -24,12 +24,12 @@ app.use(express.urlencoded({ extended: false }));
 
 app.post('/contact', (req, res) => {
 
-	const emailTemplate = ({ name, email, phone, comment }) => {
+	const emailTemplate = ({ name, email, comment }) => {
 		return {
 			from: email,
 			to: 'davidjohnwoolf@gmail.com',
 			subject: 'Contact Message - davidwoolf.info',
-			text: `Name: ${ name }\nEmail: ${ email }\nPhone: ${ phone || 'NA' }\nComment: ${ comment }`
+			text: `Name: ${ name }\nEmail: ${ email }\nComment: ${ comment }`
 		}
 	}
 
