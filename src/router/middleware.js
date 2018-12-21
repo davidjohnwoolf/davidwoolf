@@ -4,10 +4,10 @@ export const addSlideDirectionToProps = (route) => {
 
 	if (!route.oldRoute) return route
 	
-	const slideForward = findPathIndex(route.newRoute.path, route) > findPathIndex(route.oldRoute.path, route)
+	const shouldSlideForward = findPathIndex(route.newRoute.path, route) > findPathIndex(route.oldRoute.path, route)
 
 	//returns route with slideFoward prop
-	return { ...route, props: { ...route.props, slideForward } }
+	return { ...route, props: { ...route.props, shouldSlideForward } }
 }
 
 export const addPathsToProps = (route) => {

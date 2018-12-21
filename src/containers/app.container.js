@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AppContainer = ({ children, path, slideForward, previousPath, nextPath }) => {
+const AppContainer = ({ children, path, previousPath, nextPath }) => {
 
 	return (
 		<div className={ `app-container ${ path.slice(2) || 'home' }` }>

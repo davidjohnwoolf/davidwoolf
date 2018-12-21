@@ -33,9 +33,14 @@ const router = createRouter({
 const renderRoute = e => {
 	const { Component, props } = router(e)
 
-	return ReactDOM.render(<AppContainer { ...props }><Component /></AppContainer>, document.querySelector('#app'))
-
+	console.log(props)
 	window.scrollTo(0, 0)
+
+	return ReactDOM.render(
+		<AppContainer { ...props }>
+			<Component shouldSlideForward={ props.shouldSlideForward} />
+		</AppContainer>,
+	document.querySelector('#app'))
 }
 
 //for initial load

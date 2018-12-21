@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Skills = ({ slideForward }) => {
+const Skills = ({ shouldSlideForward }) => {
 
 	return (
-		<div className={ `content ${ slideForward ? 'f-enter' : 'b-enter' }` } id="skills">
+		<div className={ `content ${ shouldSlideForward ? 'f-enter' : 'b-enter' }` } id="skills">
 			<div className="skills-sections sections">
 				<section className="skills-lang">
 					<h3>Languages</h3>

@@ -37,51 +37,6 @@
 				&.contact-info {
 					grid-area: info;
 				}
-
-				.contact-form {
-
-					> div {
-						margin-bottom: 1rem;
-
-						input, textarea {
-							padding: .5rem;
-							width: 100%;
-							border: 2px $grey-light solid;
-							border-radius: $radius;
-							box-shadow: 0 0 .3rem rgba(0, 0, 0, .2);
-						}
-
-						textarea {
-							height: 8rem;
-						}
-					}
-
-					button[type=submit] {
-						padding: $gutter-sm $gutter;
-						border: none;
-						background: $contact-secondary;
-						border: $contact-secondary 2px solid;
-						color: $white;
-						transition: $transition;
-						float: right;
-						margin-bottom: 1rem;
-
-						&[disabled] {
-							background: $grey-light;
-							border-color: $grey-light;
-
-							&:hover {
-								background: $grey-light;
-								color: $white;
-							}
-						}
-
-						&:hover {
-							background: $white;
-							color: $contact-secondary;
-						}
-					}
-				}
 			}
 		}
 	}

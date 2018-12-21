@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Experience = ({ slideForward }) => {
+const Experience = ({ shouldSlideForward }) => {
 
 	return (
-		<div className={ `content ${ slideForward ? 'f-enter' : 'b-enter' }` } id="experience">
+		<div className={ `content ${ shouldSlideForward ? 'f-enter' : 'b-enter' }` } id="experience">
 			<div className="experience-sections sections">
 				<section>
 					<h3>Full Stack Web Developer</h3>

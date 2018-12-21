@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Home = ({ slideForward }) => {
+const Home = ({ shouldSlideForward }) => {
 
 	return (
-		<div className={ `content ${ slideForward ? 'f-enter' : 'b-enter' }` } id="home">
+		<div className={ `content ${ shouldSlideForward ? 'f-enter' : 'b-enter' }` } id="home">
 			<div className="home-sections sections">
 				<section className="home-picture">
 					<div aria-hidden="true" hidden>Image of David Woolf</div>

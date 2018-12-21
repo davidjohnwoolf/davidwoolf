@@ -9,6 +9,9 @@
 @import 'pages/projects';
 @import 'pages/contact';
 
+
+/* ========== general ========== */
+
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -33,45 +36,10 @@ p {
 	margin: $gutter-xsm 0 $gutter 0;
 }
 
-#app .mobile {
-	@include media-sm-plus {
-		display: none;
-	}
-}
 
-#app .not-mobile {
-	display: none;
+/* ========== app ========== */
 
-	@include media-sm-plus {
-		display: block;
-	}
-}
-
-#app .hidden {
-	visibility: hidden;
-}
-
-#app .invisible {
-	display: none;
-}
-
-#app .error {
-	color: $error;
-}
-
-#app .message {
-	text-align: center;
-	padding: $gutter-lg 0 $gutter 0;
-	font-size: 2.5rem;
-}
-
-#app .small-message {
-	text-align: center;
-	padding: $gutter 0;
-	font-size: 1.5rem;
-}
-
-.app-container {
+#app .app-container {
 	height: 100%;
 	width: 100%;
 
@@ -84,25 +52,132 @@ p {
 		right: 0;
 		z-index: -10;
 	}
-}
+
+
+/* ========== forms ========== */
+
+	.form-section {
+		height: 100%;
+
+		form {
+			> div {
+				margin-bottom: 1rem;
+
+				input, textarea {
+					padding: .5rem;
+					width: 100%;
+					border: 2px $grey-light solid;
+					border-radius: $radius;
+					box-shadow: 0 0 .3rem rgba(0, 0, 0, .2);
+				}
+
+				textarea {
+					height: 8rem;
+				}
+
+				.form-error {
+					color: $error;
+				}
+			}
+		}
+
+		button[type=submit] {
+			padding: $gutter-sm $gutter;
+			border: none;
+			background: $contact-secondary;
+			border: $contact-secondary 2px solid;
+			color: $white;
+			transition: $transition;
+			float: right;
+			margin-bottom: 1rem;
+
+			&[disabled] {
+				background: $grey-light;
+				border-color: $grey-light;
+
+				&:hover {
+					background: $grey-light;
+					color: $white;
+				}
+			}
+
+			&:hover {
+				background: $white;
+				color: $contact-secondary;
+			}
+		}
+
+		.form-message {
+			opacity: 0;
+			height: 75%;
+			display: flex;
+			flex-wrap: wrap;
+			align-content: center;
+			animation: fade-in 0.3s forwards;
+
+			@keyframes fade-in {
+			    100% { opacity: 1; }
+			}
+
+			h4 {
+				width: 100%;
+				text-align: center;
+				align-self: center;
+				font-size: 2rem;
+			}
+
+			p {
+				width: 100%;
+				text-align: center;
+				align-self: center;
+				font-size: 1.5rem
+			}
+		}
+	}
 
 
 /* ========== route transitions ========== */
 
-.f-enter {
-	transform: translateX(100%);
-    animation: slide-in-front 0.3s forwards;
-}
+	.f-enter {
+		transform: translateX(100%);
+	    animation: slide-in-front 0.3s forwards;
+	}
 
-.b-enter {
-	transform: translateX(-100%);
-    animation: slide-in-back 0.3s forwards;
-}
-    
-@keyframes slide-in-front {
-    100% { transform: translateX(0%); }
-}
+	.b-enter {
+		transform: translateX(-100%);
+	    animation: slide-in-back 0.3s forwards;
+	}
+	    
+	@keyframes slide-in-front {
+	    100% { transform: translateX(0%); }
+	}
 
-@keyframes slide-in-back {
-    100% { transform: translateX(0%); }
+	@keyframes slide-in-back {
+	    100% { transform: translateX(0%); }
+	}
+
+
+/* ========== classes ========== */
+
+	.mobile {
+		@include media-sm-plus {
+			display: none;
+		}
+	}
+
+	.not-mobile {
+		display: none;
+
+		@include media-sm-plus {
+			display: block;
+		}
+	}
+
+	.hidden {
+		visibility: hidden;
+	}
+
+	.invisible {
+		display: none;
+	}
 }

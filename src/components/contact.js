@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react'
 
-import ContactForm from './contact-form';
+import ContactForm from './forms/contact-form'
 
-const Contact = ({ slideForward }) => {
+const Contact = ({ shouldSlideForward }) => {
 
 	return (
-		<div className={ `content ${ slideForward ? 'f-enter' : 'b-enter' }` } id="contact">
+		<div className={ `content ${ shouldSlideForward ? 'f-enter' : 'b-enter' }` } id="contact">
 			<div className="contact-sections sections">
 				<section className="contact-form">
 					<h3>Send Message</h3>
-					<div className="section-content">
+					<div className="section-content form-section">
 						<ContactForm />
 					</div>
 				</section>
