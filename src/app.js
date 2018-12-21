@@ -18,21 +18,24 @@ import Experience from './components/experience'
 import Contact from './components/contact'
 
 const routes = [
-	{ path: '/', comp: (props) => <Home props={ props } /> },
-	{ path: '/skills', comp: (props) => <Skills props={ props } /> },
-	{ path: '/experience', comp: (props) => <Experience props={ props } /> },
-	{ path: '/projects', comp: (props) => <Projects props={ props } /> },
-	{ path: '/contact', comp: (props) => <Contact props={ props } /> }
+	{ path: '#/', component: Home },
+	{ path: '#/skills', component: Skills },
+	{ path: '#/experience', component: Experience },
+	{ path: '#/projects', component: Projects },
+	{ path: '#/contact', component: Contact }
 ]
 
 const router = createRouter({
-	routes, container: AppContainer, middleware: [addPathsToProps, addSlideDirectionToProps]
+	routes, middleware: [addPathsToProps, addSlideDirectionToProps]
 })
 
 //sends router components to react
 const renderRoute = e => {
+	const { Component, props } = router(e)
+
+	return ReactDOM.render(<AppContainer { ...props }><Component /></AppContainer>, document.querySelector('#app'))
+
 	window.scrollTo(0, 0)
-	return ReactDOM.render(router(e), document.querySelector('#app'))
 }
 
 //for initial load

@@ -1,15 +1,15 @@
 import React from 'react'
 
-const AppContainer = ({ child, path, slideForward, previousPath, nextPath }) => {
+const AppContainer = ({ children, path, slideForward, previousPath, nextPath }) => {
 
 	return (
-		<div className={ `app-container ${ path.slice(1) || 'home' }` }>
+		<div className={ `app-container ${ path.slice(2) || 'home' }` }>
 			<div className="fixed-bg"></div>
 			<header className="header">
 
 				<div className="page-heading">
 					<h1><a href="#/">David Woolf</a></h1>
-					<h2 className="mobile">{ previousPath ? path.slice(1, 2).toUpperCase() + path.slice(2) : 'Home' }</h2>
+					<h2 className="mobile">{ previousPath ? path.slice(2, 3).toUpperCase() + path.slice(3) : 'Home' }</h2>
 				</div>
 
 				<nav className="not-mobile">
@@ -23,11 +23,11 @@ const AppContainer = ({ child, path, slideForward, previousPath, nextPath }) => 
 				</nav>
 			</header>
 			<div>
-				{ React.cloneElement(child, { slideForward }) }
+				{ children }
 
 				<footer className="footer mobile">
 					<nav>
-						<a className={ `previous ${ !previousPath ? ' hidden' : '' }` } href={ previousPath }>&#10094;</a>
+						<a className={ `previous ${ previousPath || ' hidden' }` } href={ previousPath }>&#10094;</a>
 						<ul>
 							<li><a className="link-home" href="#/"><span><span className="hidden">Home</span></span></a></li>
 							<li><a className="link-skills" href="#/skills"><span><span className="hidden">Skills</span></span></a></li>
@@ -35,7 +35,7 @@ const AppContainer = ({ child, path, slideForward, previousPath, nextPath }) => 
 							<li><a className="link-projects" href="#/projects"><span><span className="hidden">Projects</span></span></a></li>
 							<li><a className="link-contact" href="#/contact"><span><span className="hidden">Contact</span></span></a></li>
 						</ul>
-						<a className={ `next ${ !nextPath ? ' hidden' : '' }` }  href={ nextPath }>&#10095;</a>
+						<a className={ `next ${ nextPath || ' hidden' }` }  href={ nextPath }>&#10095;</a>
 					</nav>
 				</footer>
 			</div>

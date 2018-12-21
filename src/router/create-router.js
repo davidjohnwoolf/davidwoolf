@@ -1,9 +1,9 @@
 import { pipe } from './utils'
 
-const createRouter = ({ routes, container, middleware }) => {
+const createRouter = ({ routes, middleware }) => {
 
 	//find route with matching path
-	const matchURL = url => routes.find(c => c.path === url.split('#')[1]) || routes[0]
+	const matchURL = url => routes.find(c => c.path === '#' + url.split('#')[1]) || routes[0]
 
 	//compose middleware with data
 	const applyMiddleware = (data) => middleware ? pipe(...middleware)(data) : data
@@ -14,14 +14,12 @@ const createRouter = ({ routes, container, middleware }) => {
 		const route = applyMiddleware({
 			newRoute: e ? matchURL(e.newURL) : matchURL(window.location.hash),
 			oldRoute: e ? matchURL(e.oldURL) : null,
-			routes,
-			props: {}
+			props: {},
+			routes
 		})
 
-		//return route components
-		return container
-			? container({ child: route.newRoute.comp(), ...route.props })
-			: route.newRoute.comp(route.props)
+		//return route component and props
+		return { Component: route.newRoute.component, props: route.props }
 	}
 }
 

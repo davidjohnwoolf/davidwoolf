@@ -83,15 +83,15 @@ class ContactForm extends Component {
 			: <form className="contact-form" onSubmit={ handleSubmit }>
 				<div>
 					<input type="text" name="name" id="name" value={ values.name } placeholder="name" onChange={ handleChange } />
-					<small className={ `error ${ errors.name ? 'error' : 'invisible' }`}>{ errors.name }</small>
+					<small className={ errors.name ? 'error' : 'invisible' }>{ errors.name }</small>
 				</div>
 				<div>
 					<input type="email" name="email" id="email" value={ values.email } placeholder="email" onChange={ handleChange } />
-					<small className={ `error ${ errors.email ? 'error' : 'invisible' }`}>{ errors.email }</small>
+					<small className={ errors.email ? 'error' : 'invisible' }>{ errors.email }</small>
 				</div>
 				<div>
 					<textarea name="comment" id="comment" value={ values.comment } placeholder="message" onChange={ handleChange }  />
-					<small className={ `error ${ errors.comment ? 'error' : 'invisible' }`}>{ errors.comment }</small>
+					<small className={ errors.comment ? 'error' : 'invisible' }>{ errors.comment }</small>
 				</div>
 				<button type="submit" disabled={ !isValid }>Send Message</button>
 			</form>
