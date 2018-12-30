@@ -44,7 +44,7 @@ class ContactForm extends Component {
 					: 'That isn\'t an email... you know what an email is right?'
 				case 'comment': return value && (value.length > 5)
 					? ''
-					: 'Please enter a real message or you will regret it forever'
+					: 'If you don\'t enter a real message or you will always wonder what could have been'
 
 				default: return 'Error: we did not find this field'
 			}

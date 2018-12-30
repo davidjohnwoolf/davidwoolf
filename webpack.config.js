@@ -1,12 +1,12 @@
 const path = require('path');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const production = process.env.NODE_ENV === 'production';
+const production = process.env.NODE_ENV === 'production'
 
 const extractSass = new ExtractTextPlugin({
     filename: production ? 'styles.[hash:10].min.css' : 'styles.css'
-});
+})
 
 module.exports = {
     devtool: production ? 'source-map' : '',
@@ -14,10 +14,13 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
+                exclude: /node_modules/
+            },
+            {
                 test: /\.scss$/,
-                use: extractSass.extract({
-                    use: ['css-loader', 'sass-loader']
-                }),
+                use: ['style-loader', extractSass.extract({ use: ['css-loader', 'sass-loader'] }) ],
                 exclude: /node_modules/
             },
             {
