@@ -14,13 +14,8 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
-                exclude: /node_modules/
-            },
-            {
                 test: /\.scss$/,
-                use: ['style-loader', extractSass.extract({ use: ['css-loader', 'sass-loader'] }) ],
+                use: extractSass.extract({ use: ['css-loader', 'sass-loader'] }),
                 exclude: /node_modules/
             },
             {

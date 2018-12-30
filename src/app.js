@@ -1,5 +1,4 @@
 //import css and image for webpack
-require('normalize-scss')
 require('../sass/base.scss')
 require('../assets/img/david-woolf.jpg')
 require('../assets/img/david-woolf-hover.jpg')
