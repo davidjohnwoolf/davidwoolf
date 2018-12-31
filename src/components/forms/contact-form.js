@@ -38,13 +38,13 @@ class ContactForm extends Component {
 			switch(name) {
 				case 'name': return value && (value.length > 1)
 					? ''
-					: 'Please enter a valid name or I will be VERY angry with you'
+					: 'Please enter a valid name or I will be slightly upset'
 				case 'email': return value && /^[^@]+@[^@]+\.[^@]+$/.test(value)
 					? ''
 					: 'That isn\'t an email... you know what an email is right?'
 				case 'comment': return value && (value.length > 5)
 					? ''
-					: 'If you don\'t enter a real message or you will always wonder what could have been'
+					: 'Enter a real message or you will always wonder what could have been'
 
 				default: return 'Error: we did not find this field'
 			}
