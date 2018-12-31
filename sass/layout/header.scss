@@ -12,30 +12,47 @@
 			background: $black;
 
 			a {
+				display: block;
+				transition: none;
 
-				.name-first {
+				[class^=name] {
+					display: inline-block;
+					padding: $gutter-sm;
 					background: $black;
 					color: $white;
-					display: inline-block;
-					padding: $gutter-sm $gutter;
-				}
-
-				.name-last {
-					background: $white;
-					color: $black;
-					display: inline-block;
-					padding: $gutter-sm $gutter;
 				}
 
 				&:hover {
-					.name-first {
+					background: $white;
+					color: $black;
+
+					[class^=name] {
 						background: $white;
 						color: $black;
 					}
 
+					@include media-sm-plus {
+						.name-first {
+							background: $white;
+							color: $black;
+						}
+
+						.name-last {
+							background: $black;
+							color: $white;
+						}
+					}
+				}
+
+				@include media-sm-plus {
+
+					[class^=name] {
+						padding: $gutter-sm $gutter;
+					}
+					
 					.name-last {
-						background: $black;
-						color: $white;
+						background: $white;
+						color: $black;
 					}
 				}
 			}
@@ -43,7 +60,7 @@
 
 		h2 {
 			margin: 0 auto;
-			font-size: 1rem;
+			font-size: 1.25rem;
 			margin: 0;
 			padding: $gutter-xsm $gutter-sm;
 			background: $white;
