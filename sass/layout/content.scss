@@ -1,6 +1,6 @@
 .content {
 	padding: $gutter;
-	max-width: 85rem;
+	max-width: 100rem;
 	margin: 0 auto 3rem auto;
 
 	.sections {
@@ -17,14 +17,33 @@
 				background: $black;
 				padding: $gutter-sm;
 				margin: 0;
+
+				@include media-sm-plus {
+					padding: $gutter;
+				}
 			}
 
-			h4:first-child {
+			*:first-child {
 				margin-top: 0;
 			}
 
 			.section-content {
-				padding: $gutter;
+				padding: $gutter $gutter-sm;
+
+				@include media-sm-plus {
+					padding: $gutter;
+				}
+
+				@include media-md-plus {
+					padding: $gutter-lg;
+				}
+
+				p {
+					@include media-md-plus {
+						margin-bottom: 1.5rem;
+						line-height: 1.5rem;
+					}
+				}
 			}
 		}
 	}

@@ -15,7 +15,10 @@ const Home = ({ shouldSlideForward }) => {
 							I am a web developer in Salt Lake City working in JavaScript, HTML, CSS, Node and MongoDB.  I have also worked with Ruby and have an interest in Python.
 						</p>
 						<p>
-							My current focus is in integrating more functional patterns into my applications.
+							My current focus is in integrating more functional patterns into my applications, and getting a degree in computer science.
+						</p>
+						<p>
+							I also enjoy reading, playing chess, backpacking/outdoors, and skateboarding.
 						</p>
 					</div>
 				</section>
@@ -23,24 +26,24 @@ const Home = ({ shouldSlideForward }) => {
 					<h3>Training</h3>
 					<div className="section-content">
 						<section>
-							<h4><a href="http://www.portlandcodeschool.com/">Node/JS Code School - Portland Code School</a></h4>
+							<h4><a href="//www.portlandcodeschool.com/" target="_blank">Fullstack JS Code School - Portland Code School</a></h4>
 							<p>A part time 12 week course focusing on Node, JavaScript, Express, jQuery, Backbone, and MongoDB from Portland Code School.</p>
 						</section>
 						<section>
-							<h4><a href="http://www.devpointlabs.com/">Ruby Code School - DevPoint Labs</a></h4>
+							<h4><a href="//www.devpointlabs.com/" target="_blank">Ruby Code School - DevPoint Labs</a></h4>
 							<p>A full time 12 week code school focusing on Ruby, Rails, Sinatra, and various front end technologies from Devpoint Labs.</p>
 						</section>
-						<section>
-							<h4><a href="">Web Developer Certificate - Windows</a></h4>
+						{ /* <section>
+							<h4><a href="" target="_blank">Web Developer Certificate - Windows</a></h4>
 							<p>Certified in JavaScript, HTML5 and CSS3</p>
+						</section> */ }
+						<section>
+							<h4><a href="//udemy.com" target="_blank">Courses - Udemy</a></h4>
+							<p>Completed courses in React, Redux, AngularJS, Node, and IT security</p>
 						</section>
 						<section>
-							<h4><a href="">Course Certificates - Udemy</a></h4>
-							<p>Completed courses in React, Redux, Angular, Node, and JavaScript</p>
-						</section>
-						<section>
-							<h4><a href="">Course Certificates - Lynda</a></h4>
-							<p>Completed courses in Data Structures, Object Oriented Design, and IT Security</p>
+							<h4><a href="//lynda.com" target="_blank">Courses - Lynda</a></h4>
+							<p>Completed courses in Data Structures and Object Oriented Design among others throughout the years</p>
 						</section>
 					</div>
 				</section>
@@ -48,13 +51,21 @@ const Home = ({ shouldSlideForward }) => {
 					<h3>About</h3>
 					<div className="section-content">
 						<p>
-							I started exploring web technologies in 2008 and it soon turned into a hobbie and later a career.
+							I started exploring web technologies in 2008 for personal reasons and it soon turned into a hobbie and passion, and later a career.
 						</p>
 						<p>
-							In the first years I spent my time learning and building websites for friends and clients on the side of my day job. As I started coding more I decided to turn this into a full time career and attend a code school for Ruby Development, not long after which I found myself building website templates full time.  I also took this time to attend a part time code school in the evenings for full stack JavaScript. From there I moved to a job updating and building features for websites on a dealer management platform while teaching myself React on the side. Most recently I worked as a contracted developer building a custom CRM for door to door sales with React, Node, Express, and MongoDB.  I am now looking for a job and company I can grow with over time using modern technologies.
+							In the first years I spent my time learning and building websites for friends and clients on the side of my day job. As I started coding more I decided to turn this into a full time career and attend a code school for Ruby Development.
+
+							Not long after this I found myself building website templates for a fundraising web platform. I also took this time to attend a part time code school in the evenings for full stack JavaScript.
 						</p>
 						<p>
-							I also enjoy hiking, backpacking, reading, chess, skateboarding, and anything related to fantasy or science fiction.
+							From there I moved to a job updating and building features for websites on a dealer management platform while teaching myself React on the side.
+						</p>
+						<p>
+							Most recently I worked as a contracted developer building a custom CRM for door to door sales with React, Node, Express, and MongoDB.
+						</p>
+						<p>
+							I am currently looking for a career and company I can grow with over time using modern technologies.
 						</p>
 					</div>
 				</section>

@@ -1,6 +1,6 @@
 .header {
 	padding: $gutter $gutter 0 $gutter;
-	max-width: 85rem;
+	max-width: 100rem;
 	margin: 0 auto;
 
 	.page-heading {
@@ -9,11 +9,35 @@
 		h1 {
 			font-size: 1.5rem;
 			margin: 0;
-			padding: $gutter-sm $gutter;
 			background: $black;
 
 			a {
-				color: $white;
+
+				.name-first {
+					background: $black;
+					color: $white;
+					display: inline-block;
+					padding: $gutter-sm $gutter;
+				}
+
+				.name-last {
+					background: $white;
+					color: $black;
+					display: inline-block;
+					padding: $gutter-sm $gutter;
+				}
+
+				&:hover {
+					.name-first {
+						background: $white;
+						color: $black;
+					}
+
+					.name-last {
+						background: $black;
+						color: $white;
+					}
+				}
 			}
 		}
 

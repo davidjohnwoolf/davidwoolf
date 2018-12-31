@@ -8,7 +8,7 @@ const AppContainer = ({ children, path, previousPath, nextPath }) => {
 			<header className="header">
 
 				<div className="page-heading">
-					<h1><a href="#/">David Woolf</a></h1>
+					<h1><a href="#/"><span className="name-first">David</span><span className="name-last">Woolf</span></a></h1>
 					<h2 className="mobile">{ previousPath ? path.slice(2, 3).toUpperCase() + path.slice(3) : 'Home' }</h2>
 				</div>
 
