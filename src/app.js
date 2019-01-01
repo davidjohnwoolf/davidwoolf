@@ -32,7 +32,6 @@ const router = createRouter({
 const renderRoute = e => {
 	const { Component, props } = router(e)
 
-	console.log(props)
 	window.scrollTo(0, 0)
 
 	return ReactDOM.render(

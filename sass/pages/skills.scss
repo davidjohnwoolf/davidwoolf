@@ -15,7 +15,6 @@
 	#skills {
 		.skills-sections {
 			grid-template-columns: 1fr;
-			grid-template-rows: auto;
 
 			@include media-sm-plus {
 				grid-template-columns: repeat(3, 1fr);
