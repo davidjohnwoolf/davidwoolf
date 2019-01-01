@@ -8,7 +8,7 @@ const Experience = ({ shouldSlideForward }) => {
 				<section>
 					<h3>Full Stack Web Developer</h3>
 					<div className="section-content">
-						<h4><a href="https://www.dealerspike.com/" target="_blank">Kaizen Solar</a> <span className="dates">Feb 2018 - Nov 2018</span></h4>
+						<h4><a href="//www.kaizenrenewables.com/" target="_blank">Kaizen Solar</a> <span className="dates">Feb 2018 - Nov 2018</span></h4>
 						<h4>Duty</h4>
 						<p>Building a CRM for door to door sales that lets users track leads through lists, filters, and a location based map interface using tiered user privileges</p>
 						<h4>Technology</h4>
@@ -26,7 +26,7 @@ const Experience = ({ shouldSlideForward }) => {
 				<section>
 					<h3>Website Support II</h3>
 					<div className="section-content">
-						<h4><a href="http://kaizenrenewables.com" target="_blank">Dealerspike</a> <span className="dates">Dec 2016 - Jun 2018</span></h4>
+						<h4><a href="https://dealerspike.com" target="_blank">Dealerspike</a> <span className="dates">Dec 2016 - Jun 2018</span></h4>
 						<h4>Duty</h4>
 						<p>Building custom website features and handling updates for priority client websites as well as customizing our eCommerce platform</p>
 						<h4>Technology</h4>
@@ -44,7 +44,7 @@ const Experience = ({ shouldSlideForward }) => {
 				<section>
 					<h3>Website Support</h3>
 					<div className="section-content">
-						<h4><a href="http://kaizenrenewables.com" target="_blank">Dealerspike</a> <span className="dates">May 2016 - Dec 2016</span></h4>
+						<h4><a href="https://dealerspike.com" target="_blank">Dealerspike</a> <span className="dates">May 2016 - Dec 2016</span></h4>
 						<h4>Duty</h4>
 						<p>Working with clients to customize, update and maintain their websites on our inventory management platform</p>
 						<h4>Technology</h4>
