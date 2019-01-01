@@ -8,15 +8,18 @@ const Experience = ({ shouldSlideForward }) => {
 				<section>
 					<h3>Full Stack Web Developer</h3>
 					<div className="section-content">
-						<h4><a href="https://www.dealerspike.com/" target="_blank">Kaizen Renewables</a> <span className="dates">Feb 2018 - Nov 2018</span></h4>
+						<h4><a href="https://www.dealerspike.com/" target="_blank">Kaizen Solar</a> <span className="dates">Feb 2018 - Nov 2018</span></h4>
 						<h4>Duty</h4>
 						<p>Building a CRM for door to door sales that lets users track leads through lists, filters, and a location based map interface using tiered user privileges</p>
 						<h4>Technology</h4>
 						<p>JavaScipt (ES6) with React/Redux, Node with Express, MongoDB with Mongoose, HTML5, CSS3 with Sass, Webpack, JSON Web Tokens, and the Google Maps API</p>
 						<div>
 							<h4>Reference</h4>
-							<p>Sergio Sanchez - Owner</p>
-							<p><a href="tel:8018670934">801.867.0934</a></p>
+							<p>
+								Sergio Sanchez - Owner
+								<br />
+								<a href="tel:8018670934">801.867.0934</a>
+							</p>
 						</div>
 					</div>
 				</section>
@@ -30,8 +33,11 @@ const Experience = ({ shouldSlideForward }) => {
 						<p>JavaScript (vanilla), jQuery, ASP, HTML5, CSS3 with LESS, and Bootstrap</p>
 						<div>
 							<h4>Reference</h4>
-							<p>Andrew Dobranski - Assistant Manager</p>
-							<p><a href="tel:9712804560">971.280.4560</a></p>
+							<p>
+								Andrew Dobranski - Assistant Manager
+								<br />
+								<a href="tel:9712804560">971.280.4560</a>
+							</p>
 						</div>
 					</div>
 				</section>
@@ -45,8 +51,11 @@ const Experience = ({ shouldSlideForward }) => {
 						<p>JavaScript with jQuery, ASP, HTML5, CSS3 with LESS, and Bootstrap</p>
 						<div>
 							<h4>Reference</h4>
-							<p>Andrew Dobranski - Assistant Manager</p>
-							<p><a href="tel:9712804560">971.280.4560</a></p>
+							<p>
+								Andrew Dobranski - Assistant Manager
+								<br />
+								<a href="tel:9712804560">971.280.4560</a>
+							</p>
 						</div>
 					</div>
 				</section>
@@ -60,8 +69,11 @@ const Experience = ({ shouldSlideForward }) => {
 						<p>JavaScript, HTML5, CSS3, and Bootstrap</p>
 						<div>
 							<h4>Reference</h4>
-							<p>Do - Manager</p>
-							<p><a href="tel:9712804560">971.280.4560</a></p>
+							<p>
+								Do - Manager
+								<br />
+								<a href="tel:9712804560">971.280.4560</a>
+							</p>
 						</div>
 					</div>
 				</section>

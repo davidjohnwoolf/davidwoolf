@@ -30,19 +30,19 @@
 			.section-content {
 				padding: $gutter $gutter-sm;
 
+				p {
+					@include media-md-plus {
+						margin-bottom: 1.5rem;
+						line-height: 1.5rem;
+					}
+				}
+
 				@include media-sm-plus {
 					padding: $gutter;
 				}
 
 				@include media-md-plus {
 					padding: $gutter-lg;
-				}
-
-				p {
-					@include media-md-plus {
-						margin-bottom: 1.5rem;
-						line-height: 1.5rem;
-					}
 				}
 			}
 		}
