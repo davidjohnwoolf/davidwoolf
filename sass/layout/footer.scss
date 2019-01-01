@@ -16,6 +16,16 @@
 			color: $black;
 			background: $white;
 		}
+
+		&:active {
+			color: $black;
+			background: $white;
+		}
+
+		&:visited {
+			color: $white;
+			background: $black;
+		}
 	}
 
 	nav {

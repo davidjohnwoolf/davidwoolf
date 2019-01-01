@@ -27,7 +27,7 @@ const AppContainer = ({ children, path, previousPath, nextPath }) => {
 
 				<footer className="footer mobile">
 					<nav>
-						<a className={ `previous ${ previousPath || ' hidden' }` } href={ previousPath }>&#10094;</a>
+						<a className={ `previous${ !previousPath ? ' hidden' : '' }` } href={ previousPath }>&#10094;</a>
 						<ul>
 							<li><a className="link-home" href="#/"><span><span className="hidden">Home</span></span></a></li>
 							<li><a className="link-skills" href="#/skills"><span><span className="hidden">Skills</span></span></a></li>
@@ -35,7 +35,7 @@ const AppContainer = ({ children, path, previousPath, nextPath }) => {
 							<li><a className="link-projects" href="#/projects"><span><span className="hidden">Projects</span></span></a></li>
 							<li><a className="link-contact" href="#/contact"><span><span className="hidden">Contact</span></span></a></li>
 						</ul>
-						<a className={ `next ${ nextPath || ' hidden' }` }  href={ nextPath }>&#10095;</a>
+						<a className={ `next${ !nextPath ? ' hidden' : '' }` }  href={ nextPath }>&#10095;</a>
 					</nav>
 				</footer>
 			</div>

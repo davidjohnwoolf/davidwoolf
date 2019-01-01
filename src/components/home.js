@@ -47,7 +47,7 @@ const Home = ({ shouldSlideForward }) => {
 						</section>
 					</div>
 				</section>
-				<section className="home-contact">
+				<section className="home-about">
 					<h3>About</h3>
 					<div className="section-content">
 						<p>
