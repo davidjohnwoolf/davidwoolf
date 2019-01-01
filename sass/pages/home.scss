@@ -22,17 +22,17 @@
 				"about";
 
 			@include media-sm-plus {
-				grid-template-columns: repeat(4, 1fr);
+				grid-template-columns: repeat(8, 1fr);
 				grid-template-areas:
-					"picture summary summary summary"
-					"training training about about";
+					"picture summary summary summary summary summary summary summary"
+					"training training training about about about about about";
 			}
 
 			@include media-md-plus {
 				grid-template-columns: repeat(6, 1fr);
 				grid-template-areas:
 					"picture summary summary summary summary summary"
-					"training training training about about about";
+					"training training about about about about";
 			}
 
 
@@ -52,9 +52,12 @@
 
 					@include media-sm-plus {
 						align-self: center;
+						margin: 0;
+					}
+
+					@include media-md-plus {
 						min-height: 17rem;
 						min-width: 17rem;
-						margin: 0;
 					}
 				}
 
