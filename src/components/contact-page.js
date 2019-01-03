@@ -2,7 +2,7 @@ import React from 'react'
 
 import ContactForm from './forms/contact-form'
 
-const Contact = ({ shouldSlideForward }) => {
+const ContactPage = ({ shouldSlideForward }) => {
 
 	return (
 		<div className={ `content ${ shouldSlideForward ? 'f-enter' : 'b-enter' }` } id="contact">
@@ -33,4 +33,4 @@ const Contact = ({ shouldSlideForward }) => {
 	);
 }
 
-export default Contact;
+export default ContactPage;

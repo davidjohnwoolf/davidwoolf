@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Projects = ({ shouldSlideForward }) => {
+const ProjectsPage = ({ shouldSlideForward }) => {
 
 	return (
 		<div className={ `content ${ shouldSlideForward ? 'f-enter' : 'b-enter' }` } id="projects">
@@ -76,4 +76,4 @@ const Projects = ({ shouldSlideForward }) => {
 	);
 }
 
-export default Projects;
+export default ProjectsPage;

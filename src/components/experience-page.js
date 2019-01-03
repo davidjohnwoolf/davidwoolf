@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Experience = ({ shouldSlideForward }) => {
+const ExperiencePage = ({ shouldSlideForward }) => {
 
 	return (
 		<div className={ `content ${ shouldSlideForward ? 'f-enter' : 'b-enter' }` } id="experience">
@@ -106,4 +106,4 @@ const Experience = ({ shouldSlideForward }) => {
 	);
 }
 
-export default Experience;
+export default ExperiencePage;

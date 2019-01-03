@@ -10,18 +10,18 @@ import { addSlideDirectionToProps, addPathsToProps } from './router/middleware'
 
 import AppContainer from './containers/app.container'
 
-import Home from './components/home'
-import Projects from './components/projects'
-import Skills from './components/skills'
-import Experience from './components/experience'
-import Contact from './components/contact'
+import HomePage from './components/home-page'
+import ProjectsPage from './components/projects-page'
+import SkillsPage from './components/skills-page'
+import ExperiencePage from './components/experience-page'
+import ContactPage from './components/contact-page'
 
 const routes = [
-	{ path: '#/', component: Home },
-	{ path: '#/skills', component: Skills },
-	{ path: '#/experience', component: Experience },
-	{ path: '#/projects', component: Projects },
-	{ path: '#/contact', component: Contact }
+	{ path: '#/', component: HomePage },
+	{ path: '#/skills', component: SkillsPage },
+	{ path: '#/experience', component: ExperiencePage },
+	{ path: '#/projects', component: ProjectsPage },
+	{ path: '#/contact', component: ContactPage }
 ]
 
 const router = createRouter({
