@@ -40,7 +40,7 @@ app.post('/contact', (req, res) => {
 
 			if (err) return res.json({ status: 'error', message: 'transporter.sendMail failed', data: err })
 
-			return res.json({ status: 'success', data: { message: 'Email sent successfully', info } })
+			return res.json({ status: 'success', data: info })
 		})
 	}
 
