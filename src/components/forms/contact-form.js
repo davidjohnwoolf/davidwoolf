@@ -19,7 +19,7 @@ class ContactForm extends Component {
 				comment: ''
 			},
 			isValid: false,
-			didSucceed: false
+			postStatus: false
 		}
 
 		this.handleChange = this.handleChange.bind(this)
@@ -65,24 +65,30 @@ class ContactForm extends Component {
 	async handleSubmit(e) {
 		e.preventDefault()
 
-		// const { data: res } = await axios.post('/contact', this.state.fields)
-        
-		// await res.status && (res.status === 'failure' || res.status === 'error')
-		// 	? alert('failed')
-		// 	: this.setState({ didSucceed: true })
+		const res = await axios.post('/contact', this.state.values)
 
-		this.setState({ didSucceed: true })
+		console.log(res)
+        
+		await this.setState({ postStatus: res.data.status })
 	}
 
 	render() {
-		const { state: { values, errors, didSucceed, isValid }, handleSubmit, handleChange } = this
+		const { state: { values, errors, postStatus, isValid }, handleSubmit, handleChange } = this
 
-		return didSucceed
+		return postStatus
 			? (
-				<div className="form-message">
-					<h4>Hey thanks!</h4>
-					<p>I will get back to you soon!</p>
-				</div>
+				postStatus === 'success'
+					? (
+						<div className="form-message">
+							<h4>Hey thanks!</h4>
+							<p>I will get back to you soon!</p>
+						</div>
+					) : (
+						<div className="form-message">
+							<h4>Oops, look like there was an error</h4>
+							<p>Try again or contact me using my contact information</p>
+						</div>
+					)
 			) : (
 				<form onSubmit={ handleSubmit }>
 					<Field type="text" name="name" value={ values.name } error={ errors.name } handler={ handleChange } />

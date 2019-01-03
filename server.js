@@ -33,12 +33,16 @@ app.post('/contact', (req, res) => {
 		}
 	}
 
+	console.log('body', req.body)
+
 	if (req.body.name && req.body.email && req.body.comment) {
 
 		return transporter.sendMail(emailTemplate(req.body), (err, info) => {
-			console.log('error', err)
 
-			if (err) return res.json({ status: 'error', message: 'transporter.sendMail failed', data: err })
+			if (err) {
+				console.error(err)
+				return res.json({ status: 'error', message: 'transporter.sendMail encountered an error', data: err })
+			}
 
 			return res.json({ status: 'success', data: info })
 		})
