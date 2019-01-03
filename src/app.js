@@ -28,7 +28,7 @@ const router = createRouter({
 	routes, middleware: [addPathsToProps, addSlideDirectionToProps]
 })
 
-//sends route components to react
+//sends route component to react
 const renderRoute = e => {
 	const { Component, props } = router(e)
 
@@ -38,7 +38,8 @@ const renderRoute = e => {
 		<AppContainer { ...props }>
 			<Component shouldSlideForward={ props.shouldSlideForward} />
 		</AppContainer>,
-	document.querySelector('#app'))
+		document.querySelector('#app')
+	)
 }
 
 //for initial load
