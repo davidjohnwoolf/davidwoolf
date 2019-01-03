@@ -44,8 +44,6 @@ app.post('/contact', (req, res) => {
 		})
 	}
 
-	console.log(req.body)
-
 	return res.json({ status: 'failure', data: { message: 'Error: Request body missing name, email, or comment' } })
 })
 
