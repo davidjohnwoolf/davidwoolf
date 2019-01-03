@@ -28,7 +28,7 @@ const router = createRouter({
 	routes, middleware: [addPathsToProps, addSlideDirectionToProps]
 })
 
-//sends router components to react
+//sends route components to react
 const renderRoute = e => {
 	const { Component, props } = router(e)
 
