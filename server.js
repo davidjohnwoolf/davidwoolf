@@ -33,8 +33,6 @@ app.post('/contact', (req, res) => {
 		}
 	}
 
-	console.log('body', req.body)
-
 	if (req.body.name && req.body.email && req.body.comment) {
 
 		return transporter.sendMail(emailTemplate(req.body), (err, info) => {

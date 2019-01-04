@@ -66,8 +66,6 @@ class ContactForm extends Component {
 		e.preventDefault()
 
 		const res = await axios.post('/contact', this.state.values)
-
-		console.log(res)
         
 		await this.setState({ postStatus: res.data.status })
 	}
