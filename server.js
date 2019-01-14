@@ -6,6 +6,8 @@ const path = require('path')
 const logger = require('morgan')
 const app = express()
 
+const port = process.env.PORT || 8080
+
 const transporter = nodemailer.createTransport({
 	service: 'gmail',
 	auth: {
@@ -49,6 +51,6 @@ app.post('/contact', (req, res) => {
 	return res.json({ status: 'failure', data: { message: 'Error: Request body missing name, email, or comment' } })
 })
 
-app.listen(process.env.PORT || 8080, () => console.log('listening...'))
+app.listen(port, () => console.log(`listening on ${ port }...`))
 
 module.exports = app
