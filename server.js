@@ -1,12 +1,10 @@
-require('dotenv').config()
-
 const express = require('express')
 const nodemailer = require('nodemailer')
 const path = require('path')
 const logger = require('morgan')
 const app = express()
 
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 3000
 
 const transporter = nodemailer.createTransport({
 	service: 'gmail',
