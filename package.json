@@ -5,6 +5,10 @@
   "author": "David Woolf <davidjohnwoolf@gmail.com>",
   "license": "MIT",
   "main": "server.js",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/davidjohnwoolf/davidwoolf"
+  },
   "scripts": {
     "build": "rimraf dist && NODE_ENV=production webpack --mode=production",
     "dev": "rimraf dist && NODE_ENV=development webpack --mode=development --watch"
