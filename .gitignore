@@ -67,4 +67,4 @@ docs/
 .DS_Store
 
 # docker
-Dockerfile
+Dockerfile/
