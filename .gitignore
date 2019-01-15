@@ -60,5 +60,8 @@ typings/
 # build files
 dist/
 
+# docs
+docs/
+
 # mac
 .DS_Store
