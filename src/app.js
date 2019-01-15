@@ -1,6 +1,10 @@
 //import css and image for webpack
 require('../sass/base.scss')
 require('../assets/img/david-john-woolf.jpg')
+require('../favicon.png')
+require('../favicon.ico')
+require('../apple-touch-icon.png')
+require('../mstile.png')
 
 import React from 'react'
 import ReactDOM from 'react-dom'

@@ -24,7 +24,18 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.(png|svg|jpg|gif)$/,
+                test: /\.(png|ico)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[path][name].[ext]',
+                        publicPath: '/'
+                    }
+                },
+                exclude: /node_modules/
+            },
+            {
+                test: /\.(jpg)$/,
                 use: {
                     loader: 'file-loader',
                     options: {
