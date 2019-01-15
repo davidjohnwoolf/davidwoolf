@@ -65,6 +65,3 @@ docs/
 
 # mac
 .DS_Store
-
-# docker
-/Dockerfile
