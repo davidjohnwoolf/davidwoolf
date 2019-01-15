@@ -28,7 +28,7 @@ app.post('/contact', (req, res) => {
 		return {
 			from: email,
 			to: 'davidjohnwoolf@gmail.com',
-			subject: 'Contact Message - davidwoolf.info',
+			subject: 'Contact Message - davidwoolf.online',
 			text: `Name: ${ name }\nEmail: ${ email }\nComment: ${ comment }`
 		}
 	}
