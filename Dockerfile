@@ -14,5 +14,5 @@ COPY --from=builder /node/app/server.js ./
 COPY --from=builder /node/app/dist/ ./dist
 COPY --from=builder /node/app/prod_node_modules ./node_modules
 
-EXPOSE 3000
+EXPOSE 80
 CMD ["node", "server.js"]
