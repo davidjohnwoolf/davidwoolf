@@ -2,6 +2,9 @@
 	padding: $gutter $gutter 0 $gutter;
 	max-width: 100rem;
 	margin: 3rem auto 0;
+	@include media-sm-plus {
+		margin-top: 0;
+	}
 
 	.page-heading {
 		text-align: center;
