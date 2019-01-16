@@ -68,6 +68,7 @@ docs/
 
 # docker
 docker-compose.yml
+Dockerfile
 
 # nginx
 nginx-conf/
