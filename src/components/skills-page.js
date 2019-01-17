@@ -50,7 +50,7 @@ const SkillsPage = ({ shouldSlideForward }) => {
 							<div className="bar"><span className="bar-webpack">Webpack</span></div>
 							<div className="bar"><span className="bar-inkscape">Inkscape</span></div>
 							<div className="bar"><span className="bar-gimp">Gimp</span></div>
-							<div className="bar"><span className="bar-aws">AWS</span></div>
+							<div className="bar"><span className="bar-docker">Docker</span></div>
 							<div className="bar"><span className="bar-gulp">Gulp</span></div>
 						</section>
 					</div>
