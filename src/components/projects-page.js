@@ -13,7 +13,7 @@ const ProjectsPage = ({ shouldSlideForward }) => {
 						<p>A simple portfolio website to showcase my skills as a developer (you are looking at it now).</p>
 						
 						<h4>Technology</h4>
-						<p>Node with Express, JavaScript with React, HTML5, CSS3/Sass and Webpack</p>
+						<p>Node with Express, JavaScript with React, HTML5, CSS3/Sass, Webpack and Docker</p>
 					</div>
 				</section>
 				<section>
