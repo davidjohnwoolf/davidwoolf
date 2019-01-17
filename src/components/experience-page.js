@@ -28,9 +28,9 @@ const ExperiencePage = ({ shouldSlideForward }) => {
 					<div className="section-content">
 						<h4><a href="https://dealerspike.com" target="_blank">Dealerspike</a> <span className="dates">Dec 2016 - Jun 2018</span></h4>
 						<h4>Duty</h4>
-						<p>Building custom website features and handling updates for priority client websites as well as customizing our eCommerce platform</p>
+						<p>Building custom website features and handling updates for priority client websites as well as customizing our eCommerce platform with vanilla JS</p>
 						<h4>Technology</h4>
-						<p>JavaScript (vanilla), jQuery, ASP, HTML5, CSS3 with LESS, and Bootstrap</p>
+						<p>JavaScript, jQuery, ASP, HTML5, CSS3 with LESS, and Bootstrap</p>
 						<div>
 							<h4>Reference</h4>
 							<p>
