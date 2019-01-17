@@ -94,7 +94,7 @@ const ExperiencePage = ({ shouldSlideForward }) => {
 					<div className="section-content">
 						<h4><a href="https://github.com/davidjohnwoolf/project_bold_rails" target="_blank">Freelance</a> <span className="dates">2008 - 2014</span></h4>
 						<h4>Duty</h4>
-						<p>Learning web development and occasionally building websites for friends, family and paying clients</p>
+						<p>Learning web development and occasionally building websites for friends, family and clients</p>
 						<div>
 							<h4>Technology</h4>
 							<p>JavaScript, HTML, CSS, PHP, and jQuery</p>
