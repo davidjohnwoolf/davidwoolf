@@ -27,11 +27,11 @@ const HomePage = ({ shouldSlideForward }) => {
 					<div className="section-content">
 						<section>
 							<h4><a href="//www.portlandcodeschool.com/" target="_blank">Fullstack JS Code School - Portland Code School</a></h4>
-							<p>A part time 12 week course focusing on Node, JavaScript, Express, jQuery, Backbone, and MongoDB from Portland Code School.</p>
+							<p>A part time 12 week course focusing on Node, JavaScript, Express, jQuery, Backbone, and MongoDB.</p>
 						</section>
 						<section>
 							<h4><a href="//www.devpointlabs.com/" target="_blank">Ruby Code School - DevPoint Labs</a></h4>
-							<p>A full time 12 week code school focusing on Ruby, Rails, Sinatra, and various front end technologies from Devpoint Labs.</p>
+							<p>A full time 12 week code school focusing on Ruby, Rails, Sinatra, and various front end technologies.</p>
 						</section>
 						{ /* <section>
 							<h4><a href="" target="_blank">Web Developer Certificate - Windows</a></h4>
@@ -62,7 +62,7 @@ const HomePage = ({ shouldSlideForward }) => {
 							From there I moved to a job updating and building features for websites on a dealer management platform while teaching myself React and Redux on the side.
 						</p>
 						<p>
-							Most recently I worked as a contracted developer building a custom CRM for door to door sales with React, Node, Express, and MongoDB.
+							Most recently I worked as a contracted developer building a custom CRM for door to door sales with React/Redux, Node/Express, and MongoDB.
 						</p>
 						<p>
 							I am currently looking for a career and company I can grow with over time using modern technologies.
