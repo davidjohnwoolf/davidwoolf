@@ -12,13 +12,13 @@ const HomePage = ({ shouldSlideForward }) => {
 					<h3>Introduction</h3>
 					<div className="section-content">
 						<p>
-							I am a web developer in Salt Lake City working in JavaScript, HTML, CSS, Node and MongoDB.  I have also worked with Ruby and have an interest in Python.
+							I am a web developer in Salt Lake City working in JavaScript, HTML, CSS, Node and MongoDB.  I have also worked with Ruby and some Python.
 						</p>
 						<p>
-							My current focus is in integrating more functional patterns into my applications, and getting a degree in computer science.
+							My current focus is in integrating more functional patterns into my applications as well as working towards getting a degree in computer science.
 						</p>
 						<p>
-							I also enjoy reading, playing chess, backpacking/outdoors, and skateboarding.
+							I also enjoy reading, playing chess, skateboarding, backpacking and outdoor recreation.
 						</p>
 					</div>
 				</section>
@@ -51,7 +51,7 @@ const HomePage = ({ shouldSlideForward }) => {
 					<h3>About</h3>
 					<div className="section-content">
 						<p>
-							I started exploring web technologies in 2008 for personal reasons and it soon turned into a hobbie and passion, and later a career.
+							I started exploring web technologies in 2008 and it soon turned into a hobbie and passion, and later a career.
 						</p>
 						<p>
 							In the first years I spent my time learning and building websites for friends and clients on the side of my day job. As I started coding more I decided to turn this into a full time career and attend a code school for Ruby Development.
@@ -59,7 +59,7 @@ const HomePage = ({ shouldSlideForward }) => {
 							Not long after this I found myself building website templates for a fundraising web platform. I also took this time to attend a part time code school in the evenings for full stack JavaScript.
 						</p>
 						<p>
-							From there I moved to a job updating and building features for websites on a dealer management platform while teaching myself React on the side.
+							From there I moved to a job updating and building features for websites on a dealer management platform while teaching myself React and Redux on the side.
 						</p>
 						<p>
 							Most recently I worked as a contracted developer building a custom CRM for door to door sales with React, Node, Express, and MongoDB.
