@@ -53,3 +53,23 @@
 		padding: $gutter $gutter-lg;
 	}
 }
+
+/* ========== route transitions ========== */
+
+.f-enter {
+	transform: translateX(100%);
+    animation: slide-in-front 0.3s forwards;
+}
+
+.b-enter {
+	transform: translateX(-100%);
+    animation: slide-in-back 0.3s forwards;
+}
+    
+@keyframes slide-in-front {
+    100% { transform: translateX(0%); }
+}
+
+@keyframes slide-in-back {
+    100% { transform: translateX(0%); }
+}
