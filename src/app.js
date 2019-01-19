@@ -14,6 +14,8 @@ import { addSlideDirectionToProps, addPathsToProps } from './router/middleware'
 
 import AppContainer from './containers/app.container'
 
+import PageNotFound from './components/page-not-found'
+
 import HomePage from './components/home-page'
 import ProjectsPage from './components/projects-page'
 import SkillsPage from './components/skills-page'
@@ -29,7 +31,7 @@ const routes = [
 ]
 
 const router = createRouter({
-	routes, middleware: [addPathsToProps, addSlideDirectionToProps]
+	routes, middleware: [addPathsToProps, addSlideDirectionToProps], PageNotFound
 })
 
 //sends route component to react

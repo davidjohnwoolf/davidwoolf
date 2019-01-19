@@ -14,7 +14,7 @@ export const addPathsToProps = (route) => {
 
 	const pathIndex = findPathIndex(route.newRoute.path, route)
 
-	const previousPath = route.routes[ pathIndex - 1] && `${ route.routes[ pathIndex - 1].path }`
+	const previousPath = route.routes[pathIndex - 1] && `${ route.routes[pathIndex - 1].path }`
 	const nextPath = route.routes[pathIndex + 1] && `${ route.routes[pathIndex + 1].path }`
 
 	//returns route with current, previous and next path as props

@@ -1,8 +1,8 @@
 import React from 'react'
 
-const AppContainer = ({ children, path, previousPath, nextPath }) => {
+const AppContainer = ({ children, path, previousPath, nextPath, pageExists }) => {
 
-	return (
+	return !pageExists ? children : (
 		<div className={ `app-container ${ path.slice(2) || 'home' }` }>
 			<div className="fixed-bg"></div>
 			<header className="header">
