@@ -52,7 +52,7 @@ app.post('/contact', (req, res) => {
 })
 
 // handle 404
-app.use(function (req, res, next) {
+app.use((req, res) => {
 	res.status(404).send(
 		'<div style="text-align: center; margin: 2rem 0;"><h1>404 - Page Not Found</h1><p>The page '
 		+ req.path + ' does not exist</p><p><a href="/">Go to Site</a></p></div>'
