@@ -12,10 +12,10 @@ const HomePage = ({ shouldSlideForward }) => {
 					<h3>Introduction</h3>
 					<div className="section-content">
 						<p>
-							I am a web developer in Salt Lake City working in JavaScript, HTML, CSS, Node and MongoDB.  I have also worked with Ruby and some Python.
+							I am a web developer in Salt Lake City working with JavaScript, HTML, CSS, Node and MongoDB.  I have also worked with Ruby and some Python.
 						</p>
 						<p>
-							My current focus is in integrating more functional patterns into my applications as well as working towards getting a degree in computer science.
+							My current focus is in exploring functional programming and working towards a degree in computer science.
 						</p>
 						<p>
 							I also enjoy reading, playing chess, skateboarding, backpacking and outdoor recreation.
@@ -39,11 +39,11 @@ const HomePage = ({ shouldSlideForward }) => {
 						</section> */ }
 						<section>
 							<h4><a href="//udemy.com" target="_blank">Courses - Udemy</a></h4>
-							<p>Completed courses in React, Redux, AngularJS, Node, and IT security</p>
+							<p>Completed courses in React, Redux, AngularJS, Node, and IT security.</p>
 						</section>
 						<section>
 							<h4><a href="//lynda.com" target="_blank">Courses - Lynda</a></h4>
-							<p>Completed courses in Data Structures and Object Oriented Design among others throughout the years</p>
+							<p>Completed courses in Data Structures and Object Oriented Design among others throughout the years.</p>
 						</section>
 					</div>
 				</section>
@@ -54,7 +54,7 @@ const HomePage = ({ shouldSlideForward }) => {
 							I started exploring web technologies in 2008 and it soon turned into a hobbie and passion, and later a career.
 						</p>
 						<p>
-							In the first years I spent my time learning and building websites for friends and clients on the side of my day job. As I started coding more I decided to turn this into a full time career and attend a code school for Ruby Development.
+							In the first years I spent my time learning and occasionally building websites for friends and clients on the side of my day job. As I started coding more I decided to turn this into a full time career and attend a code school for Ruby Development.
 
 							Not long after this I found myself building website templates for a fundraising web platform. I also took this time to attend a part time code school in the evenings for full stack JavaScript.
 						</p>
