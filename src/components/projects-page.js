@@ -13,7 +13,7 @@ const ProjectsPage = ({ shouldSlideForward }) => {
 						<p>A simple portfolio website to showcase my skills as a developer (you are looking at it now).</p>
 						
 						<h4>Technology</h4>
-						<p>Node with Express, JavaScript with React, HTML5, CSS3/Sass, Webpack and deployed with Docker on Digital Ocean Linux servers with an nginx reverse proxy</p>
+						<p>JavaScript with React, Node/Express, HTML5, CSS3/Sass, Webpack and deployed with Docker</p>
 					</div>
 				</section>
 				<section>
@@ -24,7 +24,7 @@ const ProjectsPage = ({ shouldSlideForward }) => {
 						<p>A feed controller and organizer that pulls public feeds from the Facebook API and lets you view, organize and filter them anonymously.</p>
 						
 						<h4>Technology</h4>
-						<p>Node with Express, JavaScript with Mithril, HTML5, CSS3, Gulp and deployed with Heroku</p>
+						<p>JavaScript with Mithril, Node/Express, HTML5, CSS3, Gulp and deployed with Heroku</p>
 					</div>
 				</section>
 				<section>
@@ -46,7 +46,7 @@ const ProjectsPage = ({ shouldSlideForward }) => {
 						<p>A collaborative capstone project for Portland Code School that pulls job postings from various different classifieds and combines them in one place.</p>
 						
 						<h4>Technology</h4>
-						<p>Node with Express, JavaScript with backbone, HTML5, CSS3, tested with Mocha/Chai and deployed with Heroku</p>
+						<p>JavaScript with backbone, Node with Express, HTML5, CSS3, tested with Mocha/Chai and deployed with Heroku</p>
 					</div>
 				</section>
 				{ /*<section>

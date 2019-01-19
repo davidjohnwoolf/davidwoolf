@@ -10,9 +10,9 @@ const ExperiencePage = ({ shouldSlideForward }) => {
 					<div className="section-content">
 						<h4><a href="//kaizenrenewables.com/" target="_blank">Kaizen Solar</a> <span className="dates">Feb 2018 - Nov 2018</span></h4>
 						<h4>Duty</h4>
-						<p>Contracted to build a CRM for door to door sales that lets users track leads through lists, filters, and a location based map interface using tiered user privileges. Started part time on the side and moved to full time in June of 2018</p>
+						<p>Contracted to build a CRM for door to door sales. Started part time on the side and moved to full time in June of 2018.</p>
 						<h4>Technology</h4>
-						<p>JavaScipt (ES6) with React/Redux, Node with Express, MongoDB with Mongoose, HTML5, CSS3 with Sass, Webpack, JSON Web Tokens, and the Google Maps API</p>
+						<p>JavaScipt (ES6) with React/Redux, Node/Express, MongoDB, HTML5, CSS3/Sass, and Webpack</p>
 						<div>
 							<h4>Reference</h4>
 							<p>
@@ -28,9 +28,9 @@ const ExperiencePage = ({ shouldSlideForward }) => {
 					<div className="section-content">
 						<h4><a href="https://www.dealerspike.com" target="_blank">Dealerspike</a> <span className="dates">Dec 2016 - Jun 2018</span></h4>
 						<h4>Duty</h4>
-						<p>Building custom website features and handling updates for priority client websites as well as customizing our eCommerce platform with vanilla JS</p>
+						<p>Building custom website features and handling updates for priority client websites as well as customizing our eCommerce platform with vanilla JS.</p>
 						<h4>Technology</h4>
-						<p>JavaScript, jQuery, ASP, HTML5, CSS3 with LESS, and Bootstrap</p>
+						<p>JavaScript, jQuery, ASP, HTML5, CSS3/LESS, and Bootstrap</p>
 						<div>
 							<h4>Reference</h4>
 							<p>
@@ -46,9 +46,9 @@ const ExperiencePage = ({ shouldSlideForward }) => {
 					<div className="section-content">
 						<h4><a href="https://www.dealerspike.com" target="_blank">Dealerspike</a> <span className="dates">May 2016 - Dec 2016</span></h4>
 						<h4>Duty</h4>
-						<p>Working with clients to customize, update and maintain their websites on our inventory management platform</p>
+						<p>Working with clients to customize, update and maintain their websites on our inventory management platform.</p>
 						<h4>Technology</h4>
-						<p>JavaScript with jQuery, ASP, HTML5, CSS3 with LESS, and Bootstrap</p>
+						<p>JavaScript with jQuery, ASP, HTML5, CSS3/LESS, and Bootstrap</p>
 						<div>
 							<h4>Reference</h4>
 							<p>
@@ -64,7 +64,7 @@ const ExperiencePage = ({ shouldSlideForward }) => {
 					<div className="section-content">
 						<h4><a href="https://www.greatergiving.com/" target="_blank">Greater Giving</a> <span className="dates">Mar 2015 - May 2016</span></h4>
 						<h4>Duty</h4>
-						<p>Building website templates for various charity fundraising events for use by organizations such as American Heart Association and Red Cross</p>
+						<p>Building website templates for various charity fundraising events for use by organizations such as American Heart Association and Red Cross.</p>
 						<h4>Technology</h4>
 						<p>JavaScript, HTML5, CSS3, and Bootstrap</p>
 						<div>
@@ -94,7 +94,7 @@ const ExperiencePage = ({ shouldSlideForward }) => {
 					<div className="section-content">
 						<h4><a href="https://github.com/davidjohnwoolf/project_bold_rails" target="_blank">Freelance</a> <span className="dates">2008 - 2014</span></h4>
 						<h4>Duty</h4>
-						<p>Learning web development and occasionally building websites for friends, family and clients</p>
+						<p>Learning web development and occasionally building websites for friends, family and clients.</p>
 						<div>
 							<h4>Technology</h4>
 							<p>JavaScript, HTML, CSS, PHP, and jQuery</p>
