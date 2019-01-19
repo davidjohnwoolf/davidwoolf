@@ -2,8 +2,8 @@ import { pipe } from './utils'
 
 const createRouter = ({ routes, middleware, PageNotFound }) => {
 
-	//find route with matching path
-	const matchURL = url => routes.find(c => c.path === '#' + url.split('#')[1] || null)
+	//find route with matching path or return null
+	const matchURL = url => routes.find(c => (!url ? routes[0] : c.path === '#' + url.split('#')[1]) || null)
 
 	//compose middleware with data
 	const applyMiddleware = (data) => middleware ? pipe(...middleware)(data) : data
