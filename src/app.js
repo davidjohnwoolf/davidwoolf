@@ -31,7 +31,7 @@ const routes = [
 ]
 
 const router = createRouter({
-	routes, middleware: [addPathsToProps, addSlideDirectionToProps], PageNotFound
+	routes, middleware: [addPathsToProps, addSlideDirectionToProps]
 })
 
 //sends route component to react
@@ -40,16 +40,24 @@ const renderRoute = e => {
 
 	window.scrollTo(0, 0)
 
+	props.path
+		? document.title = `David Woolf - ${ props.path.slice(2, 3).toUpperCase() + props.path.slice(3) || 'Home' }`
+		: document.title = 'David Woolf - Page Not Found'
+
 	return ReactDOM.render(
-		<AppContainer { ...props }>
-			<Component shouldSlideForward={ props.shouldSlideForward} />
-		</AppContainer>,
+		props.pageNotFound
+			? <PageNotFound />
+			: (
+				<AppContainer { ...props }>
+					<Component shouldSlideForward={ props.shouldSlideForward } />
+				</AppContainer>
+			),
 		document.querySelector('#app')
 	)
 }
 
 //for initial load
-renderRoute()
+renderRoute(null)
 
 //passes the hashchage event to renderRoute
 window.onhashchange = renderRoute

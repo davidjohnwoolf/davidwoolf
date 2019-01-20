@@ -1,6 +1,6 @@
 import { pipe } from './utils'
 
-const createRouter = ({ routes, middleware, PageNotFound }) => {
+const createRouter = ({ routes, middleware }) => {
 
 	//find route with matching path or return null
 	const matchURL = url => routes.find(c => (!url ? routes[0] : c.path === '#' + url.split('#')[1]) || null)
@@ -12,13 +12,13 @@ const createRouter = ({ routes, middleware, PageNotFound }) => {
 
 		const newRoute = e ? matchURL(e.newURL) : matchURL(window.location.hash)
 
-		if (!newRoute) return { Component: PageNotFound, props: { pageExists: false } }
+		if (!newRoute) return { props: { pageNotFound: true } }
 
 		//build route data with middleware if route exists
 		const route = applyMiddleware({
 			newRoute,
 			oldRoute: e ? matchURL(e.oldURL) : null,
-			props: { pageExists: true },
+			props: {},
 			routes
 		})
 
