@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const PageNotFound = () => {
 
@@ -7,7 +7,7 @@ const PageNotFound = () => {
 			<h1>Page Not Found</h1>
 			<p><a href="#/">&#10094; Back to Site</a></p>
 		</div>
-	);
+	)
 }
 
-export default PageNotFound;
+export default PageNotFound

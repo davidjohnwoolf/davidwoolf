@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const HomePage = ({ shouldSlideForward }) => {
 
@@ -72,8 +72,8 @@ const HomePage = ({ shouldSlideForward }) => {
 			</div>
 			
 		</div>
-	);
+	)
 	
 }
 
-export default HomePage;
+export default HomePage

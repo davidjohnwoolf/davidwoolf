@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const SkillsPage = ({ shouldSlideForward }) => {
 
@@ -57,7 +57,7 @@ const SkillsPage = ({ shouldSlideForward }) => {
 				</section>
 			</div>
 		</div>
-	);
+	)
 }
 
-export default SkillsPage;
+export default SkillsPage

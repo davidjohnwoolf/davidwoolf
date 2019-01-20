@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const ExperiencePage = ({ shouldSlideForward }) => {
 
@@ -77,18 +77,6 @@ const ExperiencePage = ({ shouldSlideForward }) => {
 						</div>
 					</div>
 				</section>
-				{ /* <section>
-					<h3>Website Sales and Marketing</h3>
-					<div className="section-content">
-						<h4><a href="https://www.lemonheaddesign.com/" target="_blank">Lemonhead Design</a> <span className="dates">Jan 2014 - August 2014</span></h4>
-						<h4>Duty</h4>
-						<p>Generating leads online and coverting them into clients for a small web development company</p>
-						<div className="hug-bottom">
-							<h4>Technology</h4>
-							<p>Google Analytics, knowledge of Wordpress, PHP, HTML, and CSS</p>
-						</div>
-					</div>
-				</section> */ }
 				<section>
 					<h3>Front End Web Developer</h3>
 					<div className="section-content">
@@ -103,7 +91,7 @@ const ExperiencePage = ({ shouldSlideForward }) => {
 				</section>
 			</div>
 		</div>
-	);
+	)
 }
 
-export default ExperiencePage;
+export default ExperiencePage

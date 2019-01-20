@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const ProjectsPage = ({ shouldSlideForward }) => {
 
@@ -73,7 +73,7 @@ const ProjectsPage = ({ shouldSlideForward }) => {
 				</section>
 			</div>
 		</div>
-	);
+	)
 }
 
-export default ProjectsPage;
+export default ProjectsPage
