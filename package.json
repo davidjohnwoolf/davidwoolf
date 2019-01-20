@@ -14,7 +14,7 @@
     "dev": "rimraf dist && NODE_ENV=development webpack --mode=development --watch"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.0.0",
+    "@babel/polyfill": "^7.2.5",
     "axios": "^0.18.0",
     "express": "^4.16.4",
     "nodemailer": "^4.7.0",
