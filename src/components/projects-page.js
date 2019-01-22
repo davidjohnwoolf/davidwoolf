@@ -6,14 +6,7 @@ const ProjectsPage = ({ shouldSlideForward }) => {
 	return (
 		<div className={ `content ${ shouldSlideForward ? 'f-enter' : 'b-enter' }` } id="projects">
 			<div className="project-sections sections">
-				<ProjectBox
-					title="Portfolio Site"
-					desc="A simple portfolio website to showcase my skills as a developer (you are looking at it now)."
-					tech="JavaScript with React, Node/Express, HTML5, CSS3/Sass, Webpack and deployed with Docker"
-					github="https://github.com/davidjohnwoolf/davidwoolf"
-					
-				/>
-
+				
 				<ProjectBox
 					title="Profession Quest"
 					desc="A collaborative capstone project for Portland Code School that pulls job postings from various different classifieds and combines them in one place."
@@ -43,6 +36,14 @@ const ProjectsPage = ({ shouldSlideForward }) => {
 					desc="A custom trailer builder for the Dealerspike plaform that lets visitors customize their trailer and send it to the dealer."
 					tech="JavaScript with jQuery, JSON Data Structures, HTML5, CSS3/LESS"
 					website="https://www.nationwidetrailers.com/build-custom-pj-trailer-texas--unit-builder"
+				/>
+
+				<ProjectBox
+					title="Portfolio Site"
+					desc="A simple portfolio website to showcase my skills as a developer (you are looking at it now)."
+					tech="JavaScript with React, Node/Express, HTML5, CSS3/Sass, Webpack and deployed with Docker"
+					github="https://github.com/davidjohnwoolf/davidwoolf"
+					
 				/>
 			</div>
 		</div>
