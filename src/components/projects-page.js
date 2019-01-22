@@ -22,7 +22,6 @@ const ProjectsPage = ({ shouldSlideForward }) => {
 					hasRef={ false }
 				>
 					<h4><a href="https://professionquest.herokuapp.com/login" target="_blank">Website</a> <a href="https://github.com/professionQuest/professionQuest" target="_blank">Github</a></h4>
-						<h4>Description</h4>
 				</ContentBox>
 
 				<ContentBox
