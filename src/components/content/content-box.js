@@ -2,8 +2,7 @@ import React from 'react'
 
 const ContentBox = ({ title, desc, tech, hasRef, refTitle, refPhone, children }) => {
 
-	const formattedRefPhone = hasRef
-		&& `(${ refPhone.slice(0, 3) }) ${ refPhone.slice(3, 6) }-${ refPhone.slice(6) }`
+	const formattedRefPhone = hasRef && refPhone.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3")
 
 	return (
 		<section>
