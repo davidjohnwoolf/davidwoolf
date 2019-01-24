@@ -26,7 +26,7 @@ const SkillsPage = ({ shouldSlideForward }) => {
 					<div className="section-content">
 						<section className="graph-bar">
 							<div className="bar"><span className="bar-jquery">jQuery</span></div>
-							<div className="bar"><span className="bar-react">React/Redux</span></div>
+							<div className="bar"><span className="bar-react">React</span></div>
 							<div className="bar"><span className="bar-express">Express</span></div>
 							<div className="bar"><span className="bar-less">LESS</span></div>
 							<div className="bar"><span className="bar-sass">Sass</span></div>
