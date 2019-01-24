@@ -12,15 +12,16 @@ import ReactDOM from 'react-dom'
 import createRouter from './router/create-router'
 import { addSlideDirectionToProps, addPathsToProps } from './router/middleware'
 
-import AppContainer from './containers/app.container'
+import AppContainer from './components/AppContainer'
 
-import PageNotFound from './components/page-not-found'
+import ErrorBoundary from './components/errors/ErrorBoundary'
+import PageNotFound from './components/errors/PageNotFound'
 
-import HomePage from './components/home-page'
-import ProjectsPage from './components/projects-page'
-import SkillsPage from './components/skills-page'
-import ExperiencePage from './components/experience-page'
-import ContactPage from './components/contact-page'
+import HomePage from './components/pages/HomePage'
+import ProjectsPage from './components/pages/ProjectsPage'
+import SkillsPage from './components/pages/SkillsPage'
+import ExperiencePage from './components/pages/ExperiencePage'
+import ContactPage from './components/pages/ContactPage'
 
 const routes = [
 	{ path: '#/', component: HomePage },
@@ -45,13 +46,17 @@ const renderRoute = e => {
 		: document.title = 'David Woolf - Page Not Found'
 
 	return ReactDOM.render(
-		props.pageNotFound
-			? <PageNotFound />
-			: (
-				<AppContainer { ...props }>
-					<Component shouldSlideForward={ props.shouldSlideForward } />
-				</AppContainer>
-			),
+		<ErrorBoundary>
+			{
+				props.pageNotFound
+					? <PageNotFound />
+					: (
+						<AppContainer { ...props }>
+							<Component shouldSlideForward={ props.shouldSlideForward } />
+						</AppContainer>
+					)
+			}
+		</ErrorBoundary>,
 		document.querySelector('#app')
 	)
 }

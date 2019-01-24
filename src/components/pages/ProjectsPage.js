@@ -1,5 +1,5 @@
 import React from 'react'
-import ProjectBox from './content/project-box'
+import ProjectBox from '../content/ProjectBox'
 
 const ProjectsPage = ({ shouldSlideForward }) => {
 

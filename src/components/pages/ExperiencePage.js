@@ -1,5 +1,5 @@
 import React from 'react'
-import JobBox from './content/job-box'
+import JobBox from '../content/JobBox'
 
 const ExperiencePage = ({ shouldSlideForward }) => {
 

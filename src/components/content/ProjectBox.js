@@ -1,5 +1,5 @@
 import React from 'react'
-import ContentBox from './content-box'
+import Box from './Box'
 
 const projectBox = (Component) => {
 
@@ -22,4 +22,4 @@ const projectBox = (Component) => {
 	}
 }
 
-export default projectBox(ContentBox)
+export default projectBox(Box)

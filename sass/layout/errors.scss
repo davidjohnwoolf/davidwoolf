@@ -1,0 +1,18 @@
+//react page not found
+#page-not-found {
+	width: 50%;
+	text-align: center;
+	margin: $gutter-lg auto;
+}
+
+//error boundary
+#react-error {
+	mwidth: 50%;
+	text-align: center;
+	margin: $gutter-lg auto;
+
+	.error-warning {
+		font-size: 3rem;
+		color: orange;
+	} 
+}

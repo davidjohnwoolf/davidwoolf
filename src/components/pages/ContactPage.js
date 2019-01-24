@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ContactForm from './forms/contact-form'
+import ContactForm from '../forms/ContactForm'
 
 const ContactPage = ({ shouldSlideForward }) => {
 

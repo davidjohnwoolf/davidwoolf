@@ -1,5 +1,5 @@
 import React from 'react'
-import ContentBox from './content-box'
+import Box from './Box'
 
 const jobBox = (Component) => {
 
@@ -37,4 +37,4 @@ const jobBox = (Component) => {
 	}
 }
 
-export default jobBox(ContentBox)
+export default jobBox(Box)

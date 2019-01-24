@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-import Field from './field'
+import Field from './Field'
 
 class ContactForm extends Component {
 	constructor(props) {
