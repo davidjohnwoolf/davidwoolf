@@ -1,4 +1,4 @@
-# davidwoolf.info
+# davidwoolf.info (no longer live)
 
 A website about me as a developer
 
